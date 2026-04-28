@@ -1,0 +1,637 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Santuário de São José de Ribamar</title>
+  <meta name="description" content="Santuário de São José de Ribamar — Um lugar de fé, oração e encontro com Deus." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700;900&family=Lora:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Open+Sans:wght@300;400;500;600&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+
+  <!-- ===== TOPBAR ===== -->
+  <div class="topbar">
+    <div class="topbar-inner">
+      <div class="topbar-left">
+        <a href="tel:+5598999999999"><i class="fas fa-phone"></i> (98) 9 9999-9999</a>
+        <a href="mailto:contato@santuariosaojosenoribamar.org.br"><i class="fas fa-envelope"></i> contato@santuariosjoser.org.br</a>
+      </div>
+      <div class="topbar-right">
+        <a href="https://www.instagram.com" target="_blank" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+        <a href="https://www.facebook.com" target="_blank" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+        <a href="https://www.youtube.com" target="_blank" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+      </div>
+    </div>
+  </div>
+
+  <!-- ===== HEADER ===== -->
+  <header class="site-header" id="site-header">
+    <div class="header-inner">
+      <a href="#hero" class="brand" aria-label="Santuário de São José de Ribamar">
+        <div class="brand-icon">
+          <i class="fas fa-church"></i>
+        </div>
+        <div class="brand-text">
+          <span class="brand-title">Santuário</span>
+          <span class="brand-subtitle">São José de Ribamar</span>
+        </div>
+      </a>
+
+      <nav class="main-nav" id="main-nav" aria-label="Navegação principal">
+        <ul class="nav-list">
+          <li><a href="#hero" class="nav-link">Início</a></li>
+          <li class="has-dropdown">
+            <a href="#sobre" class="nav-link">O Santuário <i class="fas fa-chevron-down"></i></a>
+            <ul class="dropdown">
+              <li><a href="#historia">História</a></li>
+              <li><a href="#sao-jose">São José de Ribamar</a></li>
+              <li><a href="#estrutura">Estrutura</a></li>
+              <li><a href="#reitoria">Reitoria</a></li>
+            </ul>
+          </li>
+          <li class="has-dropdown">
+            <a href="#liturgia" class="nav-link">Liturgia <i class="fas fa-chevron-down"></i></a>
+            <ul class="dropdown">
+              <li><a href="#horarios">Horários das Missas</a></li>
+              <li><a href="#sacramentos">Sacramentos</a></li>
+              <li><a href="#calendario">Calendário Litúrgico</a></li>
+            </ul>
+          </li>
+          <li><a href="#noticias" class="nav-link">Notícias</a></li>
+          <li class="has-dropdown">
+            <a href="#pastoral" class="nav-link">Pastoral <i class="fas fa-chevron-down"></i></a>
+            <ul class="dropdown">
+              <li><a href="#grupos">Grupos e Movimentos</a></li>
+              <li><a href="#devocoes">Devoções</a></li>
+              <li><a href="#peregrinacoes">Peregrinações</a></li>
+            </ul>
+          </li>
+          <li><a href="#contato" class="nav-link">Contato</a></li>
+        </ul>
+      </nav>
+
+      <button class="hamburger" id="hamburger" aria-label="Abrir menu" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </header>
+
+  <!-- ===== HERO ===== -->
+  <section class="hero" id="hero">
+    <div class="hero-slides">
+      <div class="hero-slide active" style="background-image: url('img/foto_2.jpeg'); background-position: center 30%;"></div>
+      <div class="hero-slide" style="background-image: url('img/foto_3.jpeg'); background-position: center 20%;"></div>
+    </div>
+    <div class="hero-overlay"></div>
+    <div class="hero-content">
+      <h1 class="hero-title">Santuário de<br><span>São José de Ribamar</span></h1>
+      <p class="hero-subtitle">Um lugar sagrado de fé, esperança e encontro com Deus.<br>Venha orar, peregrinar e renovar sua vida.</p>
+      <div class="hero-actions">
+        <a href="#horarios" class="btn btn-primary"><i class="fas fa-church"></i> Horários das Missas</a>
+        <a href="#sobre" class="btn btn-outline">Conheça o Santuário</a>
+      </div>
+    </div>
+    <div class="hero-scroll" aria-hidden="true">
+      <div class="scroll-mouse"><div class="scroll-wheel"></div></div>
+      <span>Role para baixo</span>
+    </div>
+    <div class="hero-dots" id="hero-dots"></div>
+  </section>
+
+  <!-- ===== AVISO / BANNER RÁPIDO ===== -->
+  <div class="notice-bar">
+    <div class="notice-inner">
+      <i class="fas fa-star-of-life notice-icon"></i>
+      <p><strong>Festa de São José de Ribamar — 19 de março.</strong> Programação especial com novena, procissão e missas solenes. <a href="#calendario">Ver programação completa</a></p>
+    </div>
+  </div>
+
+  <!-- ===== HORÁRIOS DAS MISSAS ===== -->
+  <section class="section section-missas" id="horarios">
+    <div class="container">
+      <div class="section-header">
+        <div class="ornament"><i class="fas fa-cross"></i></div>
+        <h2 class="section-title">Horários das Missas</h2>
+        <p class="section-subtitle">Venha participar da Eucaristia e encontrar-se com Jesus</p>
+      </div>
+      <div class="missas-grid">
+        <div class="missa-card">
+          <div class="missa-icon"><i class="fas fa-sun"></i></div>
+          <h3>Segunda a Sexta</h3>
+          <ul class="missa-horarios">
+            <li><span class="hora">07h00</span> <span class="desc">Missa Matinal</span></li>
+            <li><span class="hora">12h00</span> <span class="desc">Missa do Meio-Dia</span></li>
+            <li><span class="hora">19h00</span> <span class="desc">Missa Vespertina</span></li>
+          </ul>
+        </div>
+        <div class="missa-card destaque">
+          <div class="missa-icon"><i class="fas fa-star"></i></div>
+          <h3>Sábado</h3>
+          <ul class="missa-horarios">
+            <li><span class="hora">07h00</span> <span class="desc">Missa Matinal</span></li>
+            <li><span class="hora">16h00</span> <span class="desc">Missa das Crianças</span></li>
+            <li><span class="hora">19h00</span> <span class="desc">Missa Vigília</span></li>
+          </ul>
+        </div>
+        <div class="missa-card">
+          <div class="missa-icon"><i class="fas fa-dove"></i></div>
+          <h3>Domingo</h3>
+          <ul class="missa-horarios">
+            <li><span class="hora">07h00</span> <span class="desc">1ª Missa</span></li>
+            <li><span class="hora">09h00</span> <span class="desc">2ª Missa</span></li>
+            <li><span class="hora">11h00</span> <span class="desc">Missa das Famílias</span></li>
+            <li><span class="hora">18h00</span> <span class="desc">Missa Solene</span></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== CALENDÁRIO ===== -->
+  <section class="section section-calendario" id="calendario">
+    <div class="container">
+      <div class="section-header">
+        <div class="ornament ornament-light"><i class="fas fa-cross"></i></div>
+        <h2 class="section-title" style="color:#fff;">Agenda Litúrgica</h2>
+        <p class="section-subtitle" style="color:rgba(255,255,255,0.8);">Próximas celebrações e eventos do Santuário</p>
+      </div>
+      <div class="agenda-lista">
+        <div class="agenda-item">
+          <div class="agenda-data">
+            <span class="dia">10</span>
+            <span class="mes">MAR</span>
+          </div>
+          <div class="agenda-info">
+            <h4>Início da Novena de São José</h4>
+            <p><i class="fas fa-clock"></i> 19h00 &nbsp;|&nbsp; <i class="fas fa-map-marker-alt"></i> Igreja do Santuário</p>
+          </div>
+          <div class="agenda-tipo festivo">Festivo</div>
+        </div>
+        <div class="agenda-item">
+          <div class="agenda-data">
+            <span class="dia">19</span>
+            <span class="mes">MAR</span>
+          </div>
+          <div class="agenda-info">
+            <h4>Festa de São José de Ribamar — Missa Solene e Procissão</h4>
+            <p><i class="fas fa-clock"></i> 09h00 &nbsp;|&nbsp; <i class="fas fa-map-marker-alt"></i> Praça do Santuário</p>
+          </div>
+          <div class="agenda-tipo festivo">Padroeiro</div>
+        </div>
+        <div class="agenda-item">
+          <div class="agenda-data">
+            <span class="dia">25</span>
+            <span class="mes">MAR</span>
+          </div>
+          <div class="agenda-info">
+            <h4>Solenidade da Anunciação do Senhor</h4>
+            <p><i class="fas fa-clock"></i> 19h00 &nbsp;|&nbsp; <i class="fas fa-map-marker-alt"></i> Igreja do Santuário</p>
+          </div>
+          <div class="agenda-tipo">Litúrgico</div>
+        </div>
+        <div class="agenda-item">
+          <div class="agenda-data">
+            <span class="dia">17</span>
+            <span class="mes">ABR</span>
+          </div>
+          <div class="agenda-info">
+            <h4>Semana Santa — Quinta-Feira Santa: Missa da Ceia do Senhor</h4>
+            <p><i class="fas fa-clock"></i> 19h00 &nbsp;|&nbsp; <i class="fas fa-map-marker-alt"></i> Igreja do Santuário</p>
+          </div>
+          <div class="agenda-tipo">Litúrgico</div>
+        </div>
+        <div class="agenda-item">
+          <div class="agenda-data">
+            <span class="dia">20</span>
+            <span class="mes">ABR</span>
+          </div>
+          <div class="agenda-info">
+            <h4>Vigília Pascal e Missa da Ressurreição</h4>
+            <p><i class="fas fa-clock"></i> 21h00 &nbsp;|&nbsp; <i class="fas fa-map-marker-alt"></i> Igreja do Santuário</p>
+          </div>
+          <div class="agenda-tipo festivo">Páscoa</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== SOBRE / HISTÓRIA ===== -->
+  <section class="section section-sobre" id="sobre">
+    <div class="container">
+      <div class="sobre-grid">
+        <div class="sobre-image-wrap">
+          <div class="sobre-image-frame">
+            <img src="img/foto_1.jpeg" alt="Santuário de São José de Ribamar" loading="lazy" />
+          </div>
+          <div class="sobre-badge">
+            <i class="fas fa-church"></i>
+            <span>Desde 1615</span>
+          </div>
+        </div>
+        <div class="sobre-content" id="historia">
+          <div class="ornament"><i class="fas fa-cross"></i></div>
+          <h2 class="section-title text-left">História do Santuário</h2>
+          <p class="lead">O Santuário de São José de Ribamar é um dos mais antigos e venerados lugares de peregrinação do Maranhão, dedicado ao padroeiro do Estado.</p>
+          <p>Fundado no século XVII pelos colonizadores portugueses, o santuário guarda séculos de devoção ao glorioso São José de Ribamar, cujo nome foi dado à cidade homônima no litoral maranhense. Ao longo dos séculos, milhares de fiéis percorreram esse caminho sagrado em busca de graças, curas e renovação espiritual.</p>
+          <p>A imagem de São José de Ribamar, de origem portuguesa, é considerada milagrosa pelos devotos e é o centro da veneração no santuário. Cada ano, especialmente em março, peregrinos de todo o Maranhão e do Brasil acorrem a este lugar santo.</p>
+          <a href="#sao-jose" class="btn btn-primary" style="margin-top:1.5rem;">Conheça mais a história</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== NOTÍCIAS ===== -->
+  <section class="section section-noticias" id="noticias">
+    <div class="container">
+      <div class="section-header">
+        <div class="ornament"><i class="fas fa-cross"></i></div>
+        <h2 class="section-title">Notícias</h2>
+        <p class="section-subtitle">Fique por dentro das novidades do Santuário</p>
+      </div>
+      <div class="noticias-grid">
+        <article class="noticia-card destaque">
+          <div class="noticia-img">
+            <img src="https://images.unsplash.com/photo-1529156069898-49953e39b3ac?w=800&q=80" alt="Festa do Padroeiro" loading="lazy" />
+            <span class="noticia-categoria">Festa do Padroeiro</span>
+          </div>
+          <div class="noticia-body">
+            <span class="noticia-data"><i class="fas fa-calendar"></i> 15 de março de 2025</span>
+            <h3><a href="#">Programação completa da Festa de São José de Ribamar 2025</a></h3>
+            <p>Confira todos os detalhes da programação da maior festa do Maranhão, com novena, missas solenes, procissão e shows culturais.</p>
+            <a href="#" class="noticia-leia">Leia mais <i class="fas fa-arrow-right"></i></a>
+          </div>
+        </article>
+        <article class="noticia-card">
+          <div class="noticia-img">
+            <img src="https://images.unsplash.com/photo-1508615039623-a25605d2b022?w=600&q=80" alt="Peregrinação" loading="lazy" />
+            <span class="noticia-categoria">Peregrinação</span>
+          </div>
+          <div class="noticia-body">
+            <span class="noticia-data"><i class="fas fa-calendar"></i> 08 de março de 2025</span>
+            <h3><a href="#">Mais de 50 mil peregrinos esperados para a Romaria de 2025</a></h3>
+            <p>O Santuário se prepara para receber um número recorde de peregrinos na festividade do padroeiro.</p>
+            <a href="#" class="noticia-leia">Leia mais <i class="fas fa-arrow-right"></i></a>
+          </div>
+        </article>
+        <article class="noticia-card">
+          <div class="noticia-img">
+            <img src="https://images.unsplash.com/photo-1548625149-720754bc3916?w=600&q=80" alt="Novena" loading="lazy" />
+            <span class="noticia-categoria">Liturgia</span>
+          </div>
+          <div class="noticia-body">
+            <span class="noticia-data"><i class="fas fa-calendar"></i> 01 de março de 2025</span>
+            <h3><a href="#">Novena de São José: rezar em família é a proposta deste ano</a></h3>
+            <p>A novena em homenagem ao padroeiro começa dia 10 de março e reúne famílias em oração durante 9 dias.</p>
+            <a href="#" class="noticia-leia">Leia mais <i class="fas fa-arrow-right"></i></a>
+          </div>
+        </article>
+      </div>
+      <div class="section-footer">
+        <a href="#" class="btn btn-outline">Ver todas as notícias</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== SÃO JOSÉ ===== -->
+  <section class="section section-saojose" id="sao-jose">
+    <div class="saojose-bg"></div>
+    <div class="container">
+      <div class="saojose-inner">
+        <div class="saojose-content">
+          <div class="ornament ornament-light"><i class="fas fa-cross"></i></div>
+          <h2 class="section-title">São José de Ribamar</h2>
+          <p class="lead">Padroeiro do Maranhão, protetor das famílias e dos trabalhadores.</p>
+          <p>São José é o esposo da Virgem Maria e pai adotivo de Jesus Cristo. Homem justo, trabalhador e fiel, é invocado como protetor dos trabalhadores, das famílias e da Igreja universal. Sua devoção no Maranhão remonta aos primeiros séculos da colonização, quando os portugueses trouxeram para estas terras a veneração ao Santo de Ribamar, cidade de Portugal.</p>
+          <blockquote class="citacao">
+            <i class="fas fa-quote-left"></i>
+            <p>"São José, modelo de virtude e de obediência à vontade de Deus, guia-nos pelo caminho da santidade."</p>
+            <cite>— Oração ao Padroeiro</cite>
+          </blockquote>
+          <a href="#devocoes" class="btn btn-gold">Devoções ao Santo</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== SACRAMENTOS ===== -->
+  <section class="section section-sacramentos" id="sacramentos">
+    <div class="container">
+      <div class="section-header">
+        <div class="ornament"><i class="fas fa-cross"></i></div>
+        <h2 class="section-title">Sacramentos</h2>
+        <p class="section-subtitle">Os sete sacramentos — sinais visíveis da graça invisível de Deus</p>
+      </div>
+      <div class="sacramentos-grid">
+        <div class="sacramento-card">
+          <div class="sacramento-icon"><i class="fas fa-water"></i></div>
+          <h3>Batismo</h3>
+          <p>O sacramento do nascimento para a vida nova em Cristo. Agende o batismo do seu filho.</p>
+          <a href="#contato" class="sacramento-link">Agendar <i class="fas fa-arrow-right"></i></a>
+        </div>
+        <div class="sacramento-card">
+          <div class="sacramento-icon"><i class="fas fa-dove"></i></div>
+          <h3>Crisma</h3>
+          <p>A confirmação da fé. Inscrições abertas para os grupos de crisma do Santuário.</p>
+          <a href="#contato" class="sacramento-link">Inscrever-se <i class="fas fa-arrow-right"></i></a>
+        </div>
+        <div class="sacramento-card">
+          <div class="sacramento-icon"><i class="fas fa-bread-slice"></i></div>
+          <h3>Eucaristia</h3>
+          <p>O centro da vida cristã. Participe das missas diárias e dominicais no Santuário.</p>
+          <a href="#horarios" class="sacramento-link">Ver horários <i class="fas fa-arrow-right"></i></a>
+        </div>
+        <div class="sacramento-card">
+          <div class="sacramento-icon"><i class="fas fa-hands-praying"></i></div>
+          <h3>Confissão</h3>
+          <p>O sacramento da reconciliação e do perdão. Confissões disponíveis antes de cada missa.</p>
+          <a href="#horarios" class="sacramento-link">Horários <i class="fas fa-arrow-right"></i></a>
+        </div>
+        <div class="sacramento-card">
+          <div class="sacramento-icon"><i class="fas fa-heart"></i></div>
+          <h3>Matrimônio</h3>
+          <p>A aliança sagrada entre duas pessoas diante de Deus. Agende sua preparação.</p>
+          <a href="#contato" class="sacramento-link">Agendar <i class="fas fa-arrow-right"></i></a>
+        </div>
+        <div class="sacramento-card">
+          <div class="sacramento-icon"><i class="fas fa-oil-can"></i></div>
+          <h3>Unção dos Enfermos</h3>
+          <p>Graça de conforto e cura para os que sofrem. Atendimento sob solicitação.</p>
+          <a href="#contato" class="sacramento-link">Solicitar <i class="fas fa-arrow-right"></i></a>
+        </div>
+        <div class="sacramento-card">
+          <div class="sacramento-icon"><i class="fas fa-cross"></i></div>
+          <h3>Ordem</h3>
+          <p>O sacramento pelo qual homens são consagrados ao serviço sagrado de Deus e da Igreja.</p>
+          <a href="#contato" class="sacramento-link">Saiba mais <i class="fas fa-arrow-right"></i></a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== PASTORAL / GRUPOS ===== -->
+  <section class="section section-pastoral" id="pastoral">
+    <div class="container">
+      <div class="section-header">
+        <div class="ornament"><i class="fas fa-cross"></i></div>
+        <h2 class="section-title">Grupos e Movimentos</h2>
+        <p class="section-subtitle">Faça parte de uma comunidade viva e atuante</p>
+      </div>
+      <div class="grupos-grid" id="grupos">
+        <div class="grupo-card">
+          <div class="grupo-icon"><i class="fas fa-users"></i></div>
+          <h3>Apostolado da Oração</h3>
+          <p>Grupo dedicado à oração diária, unindo os coração dos fiéis ao Sagrado Coração de Jesus.</p>
+        </div>
+        <div class="grupo-card">
+          <div class="grupo-icon"><i class="fas fa-child"></i></div>
+          <h3>Pastoral da Criança</h3>
+          <p>Ação solidária em favor das crianças carentes, promovendo saúde, educação e fé.</p>
+        </div>
+        <div class="grupo-card">
+          <div class="grupo-icon"><i class="fas fa-person-praying"></i></div>
+          <h3>Grupo de Oração</h3>
+          <p>Encontros semanais de oração, adoração e louvor ao Espírito Santo.</p>
+        </div>
+        <div class="grupo-card">
+          <div class="grupo-icon"><i class="fas fa-bible"></i></div>
+          <h3>Círculo Bíblico</h3>
+          <p>Estudo e meditação da Palavra de Deus em pequenos grupos comunitários.</p>
+        </div>
+        <div class="grupo-card">
+          <div class="grupo-icon"><i class="fas fa-music"></i></div>
+          <h3>Coral Litúrgico</h3>
+          <p>Animação das celebrações litúrgicas através do canto sagrado e da música.</p>
+        </div>
+        <div class="grupo-card">
+          <div class="grupo-icon"><i class="fas fa-hands-helping"></i></div>
+          <h3>Caritas Paroquial</h3>
+          <p>Serviço de caridade e solidariedade às famílias em situação de vulnerabilidade.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== DEVOÇÕES ===== -->
+  <section class="section section-devocoes" id="devocoes">
+    <div class="container">
+      <div class="devocoes-grid">
+        <div class="devocao-text">
+          <div class="ornament"><i class="fas fa-cross"></i></div>
+          <h2 class="section-title text-left">Devoções Tradicionais</h2>
+          <p>O Santuário mantém vivas as tradições devocionais que alimentam a fé do povo maranhense há séculos.</p>
+          <ul class="devocao-lista">
+            <li><i class="fas fa-check-circle"></i> Novena de São José (10 a 19 de março)</li>
+            <li><i class="fas fa-check-circle"></i> Terço dos Homens — todo domingo após a missa</li>
+            <li><i class="fas fa-check-circle"></i> Rosário de Nossa Senhora — todas as sextas</li>
+            <li><i class="fas fa-check-circle"></i> Adoração ao Santíssimo Sacramento — quintas</li>
+            <li><i class="fas fa-check-circle"></i> Via-Sacra — todas as sextas da Quaresma</li>
+            <li><i class="fas fa-check-circle"></i> Procissão mensal ao redor do Santuário</li>
+          </ul>
+          <a href="#calendario" class="btn btn-primary" style="margin-top:1.5rem;">Ver Calendário Litúrgico</a>
+        </div>
+        <div class="devocao-cards">
+          <div class="devocao-card">
+            <i class="fas fa-church"></i>
+            <h4>Romaria Anual</h4>
+            <p>Todo mês de março, milhares de peregrinos percorrem o caminho até o Santuário.</p>
+          </div>
+          <div class="devocao-card">
+            <i class="fas fa-candle-holder" style="font-family: 'Font Awesome 6 Free'; content: '\f6b7'"></i>
+            <i class="fas fa-fire"></i>
+            <h4>Pagamento de Promessas</h4>
+            <p>Espaço dedicado para os fiéis cumprirem as promessas feitas ao Santo Padroeiro.</p>
+          </div>
+          <div class="devocao-card">
+            <i class="fas fa-heart"></i>
+            <h4>Ex-Votos</h4>
+            <p>Sala dos Milagres com os testemunhos de graças alcançadas pelos devotos.</p>
+          </div>
+          <div class="devocao-card">
+            <i class="fas fa-oil-can"></i>
+            <h4>Óleo Bento</h4>
+            <p>Distribuição de óleo bento em honra a São José, tradição centenária do Santuário.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== CITAÇÃO ===== -->
+  <section class="section-quote">
+    <div class="container">
+      <blockquote class="grande-citacao">
+        <i class="fas fa-quote-left"></i>
+        <p>"Ide a José!" — Gênesis 41,55</p>
+        <cite>A Sagrada Escritura, ao falar de José do Egito, prefigurava São José, guardião e protetor do Messias.</cite>
+      </blockquote>
+    </div>
+  </section>
+
+  <!-- ===== CONTATO ===== -->
+  <section class="section section-contato" id="contato">
+    <div class="container">
+      <div class="section-header">
+        <div class="ornament"><i class="fas fa-cross"></i></div>
+        <h2 class="section-title">Entre em Contato</h2>
+        <p class="section-subtitle">Estamos aqui para servi-lo</p>
+      </div>
+      <div class="contato-grid">
+        <div class="contato-info">
+          <div class="contato-item">
+            <div class="contato-item-icon"><i class="fas fa-map-marker-alt"></i></div>
+            <div>
+              <h4>Endereço</h4>
+              <p>Praça São José, s/n<br>Centro, São José de Ribamar – MA<br>CEP: 65110-000</p>
+            </div>
+          </div>
+          <div class="contato-item">
+            <div class="contato-item-icon"><i class="fas fa-phone"></i></div>
+            <div>
+              <h4>Telefone</h4>
+              <p>(98) 3227-0000<br>(98) 9 9999-9999</p>
+            </div>
+          </div>
+          <div class="contato-item">
+            <div class="contato-item-icon"><i class="fas fa-envelope"></i></div>
+            <div>
+              <h4>E-mail</h4>
+              <p>contato@santuariosjoser.org.br</p>
+            </div>
+          </div>
+          <div class="contato-item">
+            <div class="contato-item-icon"><i class="fas fa-clock"></i></div>
+            <div>
+              <h4>Secretaria</h4>
+              <p>Segunda a Sexta: 08h00 às 12h00<br>e 14h00 às 18h00<br>Sábado: 08h00 às 12h00</p>
+            </div>
+          </div>
+          <div class="redes-sociais">
+            <a href="#" class="rede-btn" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+            <a href="#" class="rede-btn" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+            <a href="#" class="rede-btn" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+            <a href="#" class="rede-btn" aria-label="WhatsApp"><i class="fab fa-whatsapp"></i></a>
+          </div>
+        </div>
+        <div class="contato-mapa">
+          <iframe
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d31820.476!2d-44.0588!3d-2.5655!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x7f68ce2a57b4e49%3A0x6b8a6b8a6b8a6b8a!2sSão%20José%20de%20Ribamar%2C%20MA!5e0!3m2!1spt!2sbr!4v1234567890"
+            width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade" title="Localização do Santuário"></iframe>
+        </div>
+        <div class="contato-form">
+          <h3>Envie uma mensagem</h3>
+          <form id="form-contato" novalidate>
+            <div class="form-group">
+              <label for="nome">Nome completo</label>
+              <input type="text" id="nome" name="nome" placeholder="Seu nome" required />
+            </div>
+            <div class="form-group">
+              <label for="email">E-mail</label>
+              <input type="email" id="email" name="email" placeholder="seu@email.com" required />
+            </div>
+            <div class="form-group">
+              <label for="assunto">Assunto</label>
+              <select id="assunto" name="assunto">
+                <option value="">Selecione um assunto</option>
+                <option>Agendamento de Sacramento</option>
+                <option>Informações sobre a Festa</option>
+                <option>Grupos e Movimentos</option>
+                <option>Peregrinação</option>
+                <option>Outros</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label for="mensagem">Mensagem</label>
+              <textarea id="mensagem" name="mensagem" rows="5" placeholder="Sua mensagem..." required></textarea>
+            </div>
+            <button type="submit" class="btn btn-primary btn-full">
+              <i class="fas fa-paper-plane"></i> Enviar Mensagem
+            </button>
+            <div class="form-success" id="form-success">
+              <i class="fas fa-check-circle"></i> Mensagem enviada com sucesso! Responderemos em breve.
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== FOOTER ===== -->
+  <footer class="site-footer-bottom">
+    <div class="footer-top">
+      <div class="container">
+        <div class="footer-grid">
+          <div class="footer-brand">
+            <div class="footer-logo">
+              <i class="fas fa-church"></i>
+              <div>
+                <span class="footer-brand-title">Santuário</span>
+                <span class="footer-brand-sub">São José de Ribamar</span>
+              </div>
+            </div>
+            <p>Um lugar sagrado de fé, esperança e encontro com Deus, no coração do Maranhão.</p>
+            <div class="footer-sociais">
+              <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+              <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+              <a href="#" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+              <a href="#" aria-label="WhatsApp"><i class="fab fa-whatsapp"></i></a>
+            </div>
+          </div>
+          <div class="footer-links">
+            <h4>O Santuário</h4>
+            <ul>
+              <li><a href="#historia">História</a></li>
+              <li><a href="#sao-jose">São José de Ribamar</a></li>
+              <li><a href="#estrutura">Estrutura</a></li>
+              <li><a href="#reitoria">Reitoria</a></li>
+            </ul>
+          </div>
+          <div class="footer-links">
+            <h4>Liturgia</h4>
+            <ul>
+              <li><a href="#horarios">Horários das Missas</a></li>
+              <li><a href="#sacramentos">Sacramentos</a></li>
+              <li><a href="#calendario">Agenda Litúrgica</a></li>
+              <li><a href="#devocoes">Devoções</a></li>
+            </ul>
+          </div>
+          <div class="footer-links">
+            <h4>Pastoral</h4>
+            <ul>
+              <li><a href="#grupos">Grupos e Movimentos</a></li>
+              <li><a href="#devocoes">Peregrinações</a></li>
+              <li><a href="#noticias">Notícias</a></li>
+              <li><a href="#contato">Contato</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <div class="container">
+        <p>&copy; 2025 Santuário de São José de Ribamar. Todos os direitos reservados.</p>
+        <p>Desenvolvido com <i class="fas fa-heart" style="color:#c0392b;"></i> para a glória de Deus.</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ===== BOTÃO VOLTAR AO TOPO ===== -->
+  <button class="back-to-top" id="back-to-top" aria-label="Voltar ao topo">
+    <i class="fas fa-chevron-up"></i>
+  </button>
+
+  <!-- ===== BOTÃO PALETA DE CORES ===== -->
+  <button class="theme-switcher" id="theme-switcher"
+          aria-label="Paleta ativa: Tradicional. Clique para alternar">
+    <span class="theme-switcher-label">Paleta</span>
+    <span class="theme-swatch theme-swatch-a" aria-hidden="true"></span>
+    <span class="theme-swatch theme-swatch-b" aria-hidden="true"></span>
+  </button>
+
+  <script src="js/main.js"></script>
+</body>
+</html>
