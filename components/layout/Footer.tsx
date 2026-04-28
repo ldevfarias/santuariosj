@@ -1,4 +1,4 @@
-import { Share2, MessageCircle } from 'lucide-react'
+import { Church, Camera, Users, Play, MessageCircle } from 'lucide-react'
 
 import Link from 'next/link'
 
@@ -11,7 +11,7 @@ export default function Footer() {
           <div className="lg:col-span-1">
             <div className="flex items-center gap-3 mb-4">
               <div className="w-10 h-10 rounded-full bg-burgundy flex items-center justify-center">
-                <Share2 size={20} className="text-gold-bright" />
+                <Church size={20} className="text-gold-bright" />
               </div>
               <div>
                 <p className="font-serif text-sm font-bold text-gold-bright">Santuário</p>
@@ -23,9 +23,9 @@ export default function Footer() {
             </p>
             <div className="flex gap-3">
               {[
-                { href: '#', icon: Share2, label: 'Instagram' },
-                { href: '#', icon: Share2, label: 'Facebook' },
-                { href: '#', icon: Share2, label: 'YouTube' },
+                { href: '#', icon: Camera, label: 'Instagram' },
+                { href: '#', icon: Users, label: 'Facebook' },
+                { href: '#', icon: Play, label: 'YouTube' },
                 { href: '#', icon: MessageCircle, label: 'WhatsApp' },
               ].map(({ href, icon: Icon, label }) => (
                 <a

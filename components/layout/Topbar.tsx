@@ -1,4 +1,4 @@
-import { Share2, Phone, Mail } from 'lucide-react'
+import { Camera, Users, Play, Phone, Mail } from 'lucide-react'
 
 export default function Topbar() {
   return (
@@ -28,7 +28,7 @@ export default function Topbar() {
             aria-label="Instagram"
             className="hover:text-gold-bright transition-colors"
           >
-            <Share2 size={14} />
+            <Camera size={14} />
           </a>
           <a
             href="https://www.facebook.com"
@@ -37,7 +37,7 @@ export default function Topbar() {
             aria-label="Facebook"
             className="hover:text-gold-bright transition-colors"
           >
-            <Share2 size={14} />
+            <Users size={14} />
           </a>
           <a
             href="https://www.youtube.com"
@@ -46,7 +46,7 @@ export default function Topbar() {
             aria-label="YouTube"
             className="hover:text-gold-bright transition-colors"
           >
-            <Share2 size={14} />
+            <Play size={14} />
           </a>
         </div>
       </div>
