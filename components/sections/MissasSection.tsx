@@ -8,8 +8,6 @@ interface MissasSectionProps {
   missas: Missa[]
 }
 
-type LucideIconName = keyof typeof Icons
-
 function DynamicIcon({ name, size = 24 }: { name: string; size?: number }) {
   // eslint-disable-next-line @typescript-eslint/no-explicit-any
   const Icon = (Icons as any)[name] as React.ComponentType<{ size?: number; className?: string }> | undefined
