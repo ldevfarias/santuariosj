@@ -1,0 +1,31 @@
+[
+  {
+    "dia": "Segunda a Sexta",
+    "icone": "Sun",
+    "horarios": [
+      { "hora": "07h00", "desc": "Missa Matinal" },
+      { "hora": "12h00", "desc": "Missa do Meio-Dia" },
+      { "hora": "19h00", "desc": "Missa Vespertina" }
+    ]
+  },
+  {
+    "dia": "Sábado",
+    "destaque": true,
+    "icone": "Star",
+    "horarios": [
+      { "hora": "07h00", "desc": "Missa Matinal" },
+      { "hora": "16h00", "desc": "Missa das Crianças" },
+      { "hora": "19h00", "desc": "Missa Vigília" }
+    ]
+  },
+  {
+    "dia": "Domingo",
+    "icone": "Bird",
+    "horarios": [
+      { "hora": "07h00", "desc": "1ª Missa" },
+      { "hora": "09h00", "desc": "2ª Missa" },
+      { "hora": "11h00", "desc": "Missa das Famílias" },
+      { "hora": "18h00", "desc": "Missa Solene" }
+    ]
+  }
+]

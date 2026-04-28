@@ -1,0 +1,27 @@
+[
+  {
+    "id": "festa-2025",
+    "titulo": "Programação completa da Festa de São José de Ribamar 2025",
+    "categoria": "Festa do Padroeiro",
+    "data": "15 de março de 2025",
+    "resumo": "Confira todos os detalhes da programação da maior festa do Maranhão, com novena, missas solenes, procissão e shows culturais.",
+    "imagem": "https://images.unsplash.com/photo-1529156069898-49953e39b3ac?w=800&q=80",
+    "destaque": true
+  },
+  {
+    "id": "romaria-2025",
+    "titulo": "Mais de 50 mil peregrinos esperados para a Romaria de 2025",
+    "categoria": "Peregrinação",
+    "data": "08 de março de 2025",
+    "resumo": "O Santuário se prepara para receber um número recorde de peregrinos na festividade do padroeiro.",
+    "imagem": "https://images.unsplash.com/photo-1508615039623-a25605d2b022?w=600&q=80"
+  },
+  {
+    "id": "novena-2025",
+    "titulo": "Novena de São José: rezar em família é a proposta deste ano",
+    "categoria": "Liturgia",
+    "data": "01 de março de 2025",
+    "resumo": "A novena em homenagem ao padroeiro começa dia 10 de março e reúne famílias em oração durante 9 dias.",
+    "imagem": "https://images.unsplash.com/photo-1548625149-720754bc3916?w=600&q=80"
+  }
+]

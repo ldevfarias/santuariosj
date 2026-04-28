@@ -1,0 +1,8 @@
+[
+  { "nome": "Apostolado da Oração", "icone": "Heart", "descricao": "Grupo dedicado à oração diária, unindo os corações dos fiéis ao Sagrado Coração de Jesus." },
+  { "nome": "Pastoral da Criança", "icone": "Baby", "descricao": "Ação solidária em favor das crianças carentes, promovendo saúde, educação e fé." },
+  { "nome": "Grupo de Oração", "icone": "HandHeart", "descricao": "Encontros semanais de oração, adoração e louvor ao Espírito Santo." },
+  { "nome": "Círculo Bíblico", "icone": "BookOpen", "descricao": "Estudo e meditação da Palavra de Deus em pequenos grupos comunitários." },
+  { "nome": "Coral Litúrgico", "icone": "Music", "descricao": "Animação das celebrações litúrgicas através do canto sagrado e da música." },
+  { "nome": "Caritas Paroquial", "icone": "Users", "descricao": "Serviço de caridade e solidariedade às famílias em situação de vulnerabilidade." }
+]

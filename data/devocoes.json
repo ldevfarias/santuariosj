@@ -1,0 +1,16 @@
+{
+  "lista": [
+    "Novena de São José (10 a 19 de março)",
+    "Terço dos Homens — todo domingo após a missa",
+    "Rosário de Nossa Senhora — todas as sextas",
+    "Adoração ao Santíssimo Sacramento — quintas",
+    "Via-Sacra — todas as sextas da Quaresma",
+    "Procissão mensal ao redor do Santuário"
+  ],
+  "cards": [
+    { "titulo": "Romaria Anual", "descricao": "Todo mês de março, milhares de peregrinos percorrem o caminho até o Santuário.", "icone": "Church" },
+    { "titulo": "Pagamento de Promessas", "descricao": "Espaço dedicado para os fiéis cumprirem as promessas feitas ao Santo Padroeiro.", "icone": "Flame" },
+    { "titulo": "Ex-Votos", "descricao": "Sala dos Milagres com os testemunhos de graças alcançadas pelos devotos.", "icone": "Heart" },
+    { "titulo": "Óleo Bento", "descricao": "Distribuição de óleo bento em honra a São José, tradição centenária do Santuário.", "icone": "Droplets" }
+  ]
+}

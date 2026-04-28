@@ -1,0 +1,9 @@
+[
+  { "id": "batismo", "nome": "Batismo", "icone": "Droplets", "descricao": "O sacramento do nascimento para a vida nova em Cristo. Agende o batismo do seu filho.", "cta": "Agendar", "href": "#contato" },
+  { "id": "crisma", "nome": "Crisma", "icone": "Feather", "descricao": "A confirmação da fé. Inscrições abertas para os grupos de crisma do Santuário.", "cta": "Inscrever-se", "href": "#contato" },
+  { "id": "eucaristia", "nome": "Eucaristia", "icone": "Wheat", "descricao": "O centro da vida cristã. Participe das missas diárias e dominicais no Santuário.", "cta": "Ver horários", "href": "#horarios" },
+  { "id": "confissao", "nome": "Confissão", "icone": "HandHeart", "descricao": "O sacramento da reconciliação e do perdão. Confissões disponíveis antes de cada missa.", "cta": "Horários", "href": "#horarios" },
+  { "id": "matrimonio", "nome": "Matrimônio", "icone": "Heart", "descricao": "A aliança sagrada entre duas pessoas diante de Deus. Agende sua preparação.", "cta": "Agendar", "href": "#contato" },
+  { "id": "uncao", "nome": "Unção dos Enfermos", "icone": "Flame", "descricao": "Graça de conforto e cura para os que sofrem. Atendimento sob solicitação.", "cta": "Solicitar", "href": "#contato" },
+  { "id": "ordem", "nome": "Ordem", "icone": "Cross", "descricao": "O sacramento pelo qual homens são consagrados ao serviço sagrado de Deus e da Igreja.", "cta": "Saiba mais", "href": "#contato" }
+]

@@ -1,0 +1,42 @@
+[
+  {
+    "dia": 10,
+    "mes": "MAR",
+    "titulo": "Início da Novena de São José",
+    "hora": "19h00",
+    "local": "Igreja do Santuário",
+    "tipo": "festivo"
+  },
+  {
+    "dia": 19,
+    "mes": "MAR",
+    "titulo": "Festa de São José de Ribamar — Missa Solene e Procissão",
+    "hora": "09h00",
+    "local": "Praça do Santuário",
+    "tipo": "padroeiro"
+  },
+  {
+    "dia": 25,
+    "mes": "MAR",
+    "titulo": "Solenidade da Anunciação do Senhor",
+    "hora": "19h00",
+    "local": "Igreja do Santuário",
+    "tipo": "liturgico"
+  },
+  {
+    "dia": 17,
+    "mes": "ABR",
+    "titulo": "Semana Santa — Quinta-Feira Santa: Missa da Ceia do Senhor",
+    "hora": "19h00",
+    "local": "Igreja do Santuário",
+    "tipo": "liturgico"
+  },
+  {
+    "dia": 20,
+    "mes": "ABR",
+    "titulo": "Vigília Pascal e Missa da Ressurreição",
+    "hora": "21h00",
+    "local": "Igreja do Santuário",
+    "tipo": "festivo"
+  }
+]
