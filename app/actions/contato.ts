@@ -73,8 +73,8 @@ export async function enviarContato(
     await resend.emails.send({
       from: fromEmail,
       to: toEmail,
-      subject: `[Site Santuário] ${assunto ?? 'Mensagem de contato'}`,
-      text: `Nome: ${nome}\nE-mail: ${email}\nAssunto: ${assunto ?? '—'}\n\n${mensagem}`,
+      subject: `[Site Santuário] ${assunto || 'Mensagem de contato'}`,
+      text: `Nome: ${nome}\nE-mail: ${email}\nAssunto: ${assunto || '—'}\n\n${mensagem}`,
     })
 
     return { success: true, message: 'Mensagem enviada com sucesso! Responderemos em breve.' }

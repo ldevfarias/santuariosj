@@ -107,6 +107,8 @@ export default function ContatoForm() {
 
       {result && (
         <div
+          role="status"
+          aria-live="polite"
           className={`flex items-center gap-2 p-4 rounded text-sm font-medium ${
             result.success
               ? 'bg-green-50 text-green-800 border border-green-200'
