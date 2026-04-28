@@ -51,10 +51,8 @@ const nextConfig: NextConfig = {
       },
     ]
   },
-  experimental: {
-    turbo: {
-      root: path.resolve(__dirname),
-    },
+  turbopack: {
+    root: path.resolve(__dirname),
   },
 }
 
