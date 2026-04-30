@@ -3,6 +3,8 @@ import { Cinzel, Lora, Open_Sans } from 'next/font/google'
 import type { Metadata } from 'next'
 
 import BackToTop from '@/components/interactive/BackToTop'
+import HashScrollFix from '@/components/interactive/HashScrollFix'
+import ProgressBar from '@/components/interactive/ProgressBar'
 import Footer from '@/components/layout/Footer'
 import Header from '@/components/layout/Header'
 import Topbar from '@/components/layout/Topbar'
@@ -103,11 +105,13 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         />
       </head>
       <body>
+        <ProgressBar />
         <Topbar />
         <Header />
         <main>{children}</main>
         <Footer />
         <BackToTop />
+        <HashScrollFix />
       </body>
     </html>
   )
