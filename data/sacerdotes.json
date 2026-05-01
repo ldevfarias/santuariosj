@@ -1,0 +1,38 @@
+[
+  {
+    "id": "dom-jose-maria",
+    "nome": "José Maria da Silva",
+    "titulo": "Dom",
+    "cargo": "Bispo Diocesano",
+    "foto": "https://placehold.co/600x800",
+    "bio": "Dom José Maria da Silva nasceu em Caxias, Maranhão, e foi ordenado sacerdote em 1995 pela Diocese de Caxias do Maranhão. Após anos de missão pastoral em diferentes paróquias do estado, foi consagrado bispo em 2014, assumindo a responsabilidade de pastorear o Santuário de São José de Ribamar e toda a região eclesiástica. Com profunda devoção a São José, Dom José Maria imprimiu ao Santuário um espírito de hospitalidade e evangelização que o tornou referência espiritual no Maranhão. Em seu episcopado, dedicou especial atenção à formação dos fiéis, à renovação das celebrações litúrgicas e ao fortalecimento das pastorais sociais, com especial atenção aos mais pobres e vulneráveis da comunidade.",
+    "bispo": true
+  },
+  {
+    "id": "pe-carlos-eduardo",
+    "nome": "Carlos Eduardo Fonseca",
+    "titulo": "Pe.",
+    "cargo": "Pároco",
+    "foto": "https://placehold.co/600x600",
+    "bio": "Pe. Carlos Eduardo Fonseca é natural de São Luís do Maranhão e foi ordenado sacerdote em 2005, depois de completar sua formação no Seminário Nossa Senhora das Graças. Com vocação marcada pela atenção às famílias e aos jovens, assumiu a função de pároco do Santuário em 2019, onde coordena as celebrações eucarísticas, o acompanhamento dos sacramentos e a animação das comunidades de base. Reconhecido por sua proximidade com os fiéis, Pe. Carlos Eduardo é figura presente tanto nas grandes festas litúrgicas quanto nas visitas às comunidades mais distantes da região.",
+    "bispo": false
+  },
+  {
+    "id": "pe-andre-luis",
+    "nome": "André Luís Marques",
+    "titulo": "Pe.",
+    "cargo": "Vigário Paroquial",
+    "foto": "https://placehold.co/600x600",
+    "bio": "Pe. André Luís Marques nasceu em Imperatriz, Maranhão, e ingressou na vida sacerdotal em 2010, após sentir o chamado durante sua participação na Pastoral da Juventude. Como vigário paroquial, auxilia diretamente na administração sacramental e na catequese de adultos, além de coordenar os grupos de oração do Santuário. Pe. André Luís tem especial apreço pela tradição das festas marianas e pela devoção popular, contribuindo para que o patrimônio espiritual do Santuário seja transmitido às novas gerações com fidelidade e criatividade.",
+    "bispo": false
+  },
+  {
+    "id": "pe-thiago-costa",
+    "nome": "Thiago Costa Ribeiro",
+    "titulo": "Pe.",
+    "cargo": "Capelão",
+    "foto": "https://placehold.co/600x600",
+    "bio": "Pe. Thiago Costa Ribeiro é o mais jovem do corpo sacerdotal do Santuário, ordenado em 2018 pela Arquidiocese de São Luís. Exercendo o ministério de capelão, Pe. Thiago dedica-se especialmente ao acompanhamento espiritual dos peregrinos, às confissões e ao serviço de assistência religiosa aos enfermos e idosos da comunidade. Sua presença discreta e seu testemunho de vida simples têm conquistado a confiança de inúmeros fiéis que buscam orientação espiritual no Santuário.",
+    "bispo": false
+  }
+]
