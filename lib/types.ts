@@ -31,9 +31,16 @@ export type Noticia = {
 
 export type Sacramento = {
   id: string
+  slug: string
   nome: string
   descricao: string
-  cta: string
+  descricaoItalico?: boolean
+  descricaoLonga: string
+  requisitos: string[]
+  agendamento: string
+  agendamentoItens?: string[]
+  agendamentoContato?: string
+  cta?: string
   href: string
   icone: string
 }
@@ -42,6 +49,7 @@ export type Grupo = {
   nome: string
   descricao: string
   icone: string
+  encontro?: string
 }
 
 export type Devocao = {
@@ -50,13 +58,50 @@ export type Devocao = {
   icone: string
 }
 
+export type DevocaoPage = {
+  slug: string
+  titulo: string
+  descricaoHero: string
+  resumoArtigo: string
+  paragrafos: string[]
+  imagemSrc: string
+  imagemAlt: string
+  imagemSecundariaSrc?: string
+  imagemSecundariaAlt?: string
+  href: string
+}
+
 export type DevoItem = {
   titulo: string
   descricao: string
   icone: string
 }
 
+export type MarcoHistorico = {
+  ano: string
+  titulo: string
+  descricao: string
+}
+
+export type Historia = {
+  intro: string
+  lenda: string
+  milagre: string
+  marcos: MarcoHistorico[]
+  complexo: string[]
+}
+
 export type ContactFormState = {
   success: boolean
   message: string
 } | null
+
+export type Sacerdote = {
+  id: string
+  nome: string
+  titulo: string
+  cargo: string
+  foto: string
+  bio: string
+  bispo: boolean
+}
