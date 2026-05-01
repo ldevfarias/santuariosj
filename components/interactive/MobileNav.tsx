@@ -11,35 +11,35 @@ interface NavItem {
 }
 
 const navItems: NavItem[] = [
-  { label: 'Início', href: '#hero' },
+  { label: 'Início', href: '/#hero' },
   {
     label: 'O Santuário',
-    href: '#sobre',
+    href: '/#sobre',
     children: [
-      { label: 'História', href: '#historia' },
-      { label: 'São José de Ribamar', href: '#sao-jose' },
-      { label: 'Estrutura', href: '#sobre' },
+      { label: 'História', href: '/#historia' },
+      { label: 'Estrutura', href: '/#sobre' },
+      { label: 'Devoções', href: '/#devocoes' },
     ],
   },
   {
     label: 'Liturgia',
-    href: '#horarios',
+    href: '/#horarios',
     children: [
-      { label: 'Horários das Missas', href: '#horarios' },
-      { label: 'Sacramentos', href: '#sacramentos' },
-      { label: 'Calendário Litúrgico', href: '#calendario' },
+      { label: 'Horários das Missas', href: '/#horarios' },
+      { label: 'Sacramentos', href: '/#sacramentos' },
+      { label: 'Calendário Litúrgico', href: '/#calendario' },
     ],
   },
-  { label: 'Notícias', href: '#noticias' },
+  { label: 'Notícias', href: '/#noticias' },
   {
     label: 'Pastoral',
-    href: '#pastoral',
+    href: '/#pastoral',
     children: [
-      { label: 'Grupos e Movimentos', href: '#pastoral' },
-      { label: 'Devoções', href: '#devocoes' },
+      { label: 'Grupos e Movimentos', href: '/#pastoral' },
     ],
   },
-  { label: 'Contato', href: '#contato' },
+  { label: 'Administração', href: '/episcopal' },
+  { label: 'Contato', href: '/#contato' },
 ]
 
 interface MobileNavProps {
