@@ -2,6 +2,8 @@ import path from 'path'
 
 import type { NextConfig } from 'next'
 
+const isDev = process.env.NODE_ENV === 'development'
+
 const securityHeaders = [
   {
     key: 'X-Frame-Options',
@@ -23,9 +25,9 @@ const securityHeaders = [
     key: 'Content-Security-Policy',
     value: [
       "default-src 'self'",
-      "script-src 'self' 'unsafe-inline'",
+      `script-src 'self' 'unsafe-inline'${isDev ? " 'unsafe-eval'" : ''}`,
       "style-src 'self' 'unsafe-inline' https://fonts.googleapis.com",
-      "img-src 'self' images.unsplash.com data: blob:",
+      "img-src 'self' images.unsplash.com https://placehold.co data: blob:",
       "font-src 'self' https://fonts.gstatic.com",
       "frame-src https://www.google.com/maps/",
       "connect-src 'self'",
@@ -39,6 +41,11 @@ const nextConfig: NextConfig = {
       {
         protocol: 'https',
         hostname: 'images.unsplash.com',
+        pathname: '/**',
+      },
+      {
+        protocol: 'https',
+        hostname: 'placehold.co',
         pathname: '/**',
       },
     ],
