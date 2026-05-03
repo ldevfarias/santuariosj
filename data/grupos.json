@@ -1,8 +1,8 @@
 [
-  { "nome": "Apostolado da Oração", "icone": "Heart", "descricao": "Grupo dedicado à oração diária, unindo os corações dos fiéis ao Sagrado Coração de Jesus." },
-  { "nome": "Pastoral da Criança", "icone": "Baby", "descricao": "Ação solidária em favor das crianças carentes, promovendo saúde, educação e fé." },
-  { "nome": "Grupo de Oração", "icone": "HandHeart", "descricao": "Encontros semanais de oração, adoração e louvor ao Espírito Santo." },
-  { "nome": "Círculo Bíblico", "icone": "BookOpen", "descricao": "Estudo e meditação da Palavra de Deus em pequenos grupos comunitários." },
-  { "nome": "Coral Litúrgico", "icone": "Music", "descricao": "Animação das celebrações litúrgicas através do canto sagrado e da música." },
-  { "nome": "Caritas Paroquial", "icone": "Users", "descricao": "Serviço de caridade e solidariedade às famílias em situação de vulnerabilidade." }
+  { "nome": "Apostolado da Oração", "icone": "Heart", "descricao": "Grupo dedicado à oração diária, unindo os corações dos fiéis ao Sagrado Coração de Jesus.", "encontro": "Encontro semanal: quartas-feiras, às 19h" },
+  { "nome": "Pastoral da Criança", "icone": "Baby", "descricao": "Ação solidária em favor das crianças carentes, promovendo saúde, educação e fé.", "encontro": "Encontro semanal: sábados, às 8h" },
+  { "nome": "Grupo de Oração", "icone": "Sparkles", "descricao": "Encontros semanais de oração, adoração e louvor ao Espírito Santo.", "encontro": "Encontro semanal: sextas-feiras, às 19h30" },
+  { "nome": "Círculo Bíblico", "icone": "BookOpen", "descricao": "Estudo e meditação da Palavra de Deus em pequenos grupos comunitários.", "encontro": "Encontro semanal: terças-feiras, às 18h" },
+  { "nome": "Coral Litúrgico", "icone": "Music", "descricao": "Animação das celebrações litúrgicas através do canto sagrado e da música.", "encontro": "Ensaio semanal: sábados, às 16h" },
+  { "nome": "Caritas Paroquial", "icone": "Users", "descricao": "Serviço de caridade e solidariedade às famílias em situação de vulnerabilidade.", "encontro": "Encontro semanal: domingos, às 10h30" }
 ]

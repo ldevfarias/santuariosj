@@ -10,8 +10,8 @@ export default function SaoJoseSection() {
       id="sao-jose"
       className="relative py-24 bg-burgundy-dk overflow-hidden"
     >
-      <div className="absolute inset-0 bg-[url('/img/foto_2.jpeg')] bg-cover bg-center opacity-10" />
-      <div className="relative z-[1] container-site max-w-2xl">
+      <div className="absolute inset-0 bg-[url('/img/foto_2.jpeg')] bg-cover bg-position-[center_30%] opacity-10" />
+      <div className="reveal relative z-[1] container-site max-w-2xl">
         <Ornament light />
         <h2 className="font-serif text-[clamp(1.8rem,4vw,2.8rem)] font-bold text-white mb-4 text-center">
           São José de Ribamar

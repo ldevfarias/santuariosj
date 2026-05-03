@@ -4,8 +4,8 @@ import Image from 'next/image'
 import { useCallback, useEffect, useRef, useState } from 'react'
 
 const slides = [
-  { src: '/img/foto_2.jpeg', alt: 'Santuário de São José de Ribamar' },
-  { src: '/img/foto_3.jpeg', alt: 'Igreja do Santuário' },
+  { src: '/img/sagrada_familia.avif', alt: 'Sagrada Família — Santuário de São José de Ribamar', position: 'object-center' },
+  { src: '/img/foto_3.jpeg', alt: 'Igreja do Santuário', position: 'object-[center_20%]' },
 ]
 
 export default function HeroSlider() {
@@ -40,16 +40,15 @@ export default function HeroSlider() {
       {slides.map((slide, i) => (
         <div
           key={slide.src}
-          className={`absolute inset-0 transition-opacity duration-1000 ${
-            i === current ? 'opacity-100' : 'opacity-0'
-          }`}
+          className={`absolute inset-0 transition-opacity duration-1000 ${i === current ? 'opacity-100' : 'opacity-0'
+            }`}
         >
           <Image
             src={slide.src}
             alt={slide.alt}
             fill
             priority={i === 0}
-            className="object-cover object-center"
+            className={`object-cover ${slide.position}`}
             sizes="100vw"
           />
         </div>
@@ -65,9 +64,8 @@ export default function HeroSlider() {
               goTo(i)
               resetTimer()
             }}
-            className={`w-2.5 h-2.5 rounded-full transition-all ${
-              i === current ? 'bg-white scale-125' : 'bg-white/50'
-            }`}
+            className={`w-2.5 h-2.5 rounded-full transition-all ${i === current ? 'bg-white scale-125' : 'bg-white/50'
+              }`}
           />
         ))}
       </div>

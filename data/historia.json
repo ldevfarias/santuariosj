@@ -1,0 +1,39 @@
+{
+  "intro": "O Santuário de São José de Ribamar é um dos mais antigos e venerados lugares de peregrinação do Maranhão, dedicado ao padroeiro do Estado.",
+  "lenda": "Diz a lenda que um navegador português, após ter se desviado de sua rota, esteve prestes a naufragar em plena baía de São José por causa de uma tempestade. Tendo invocado a intercessão do santo, o navegador viu a tempestade cessar. Grato pela ajuda de São José, decidiu erguer uma capelinha de frente para o mar, trazendo de Portugal uma imagem do santo.",
+  "milagre": "Tempos depois, moradores de Anindiba dos Indígenas — hoje Paço do Lumiar — levaram a imagem para sua igreja. Contudo, misteriosamente, ao amanhecer, a imagem voltara à sua capelinha de origem. Mesmo com sentinelas de guarda, São José, transformando seu cajado em luzeiro, desceu protegido por santos e anjos, deixando o caminho repleto de rastros de luz. Assim ficou entendido que o santo desejava permanecer de frente para o mar.",
+  "marcos": [
+    {
+      "ano": "1615",
+      "titulo": "Fundação da Capelinha",
+      "descricao": "Navegador português ergue a primeira capelinha de frente para o mar após ser salvo de naufrágio pela intercessão de São José."
+    },
+    {
+      "ano": "1915–1917",
+      "titulo": "Construção da Igreja Matriz",
+      "descricao": "O atual prédio da Igreja Matriz teve sua construção iniciada em março de 1915 e concluída dois anos mais tarde."
+    },
+    {
+      "ano": "1942",
+      "titulo": "Elevação à Paróquia",
+      "descricao": "Em 29 de abril de 1942, Dom Carlos Carmello de Vasconcellos Motta elevou o curato de São José de Ribamar à categoria de Paróquia amovível."
+    },
+    {
+      "ano": "2011",
+      "titulo": "Santuário Arquidiocesano",
+      "descricao": "Em 9 de setembro de 2011, Dom Frei José Belisário da Silva, OFM, criou o Santuário Arquidiocesano São José de Ribamar."
+    }
+  ],
+  "complexo": [
+    "Igreja Matriz de São José de Ribamar",
+    "Centro Pastoral",
+    "Salão Paroquial",
+    "Casa dos Milagres",
+    "Praça São José (caminho de São José)",
+    "Concha Acústica",
+    "Cripta (sob a Concha)",
+    "Gruta de Nossa Senhora de Lourdes",
+    "Monumento a São José",
+    "Museu dos ex-votos"
+  ]
+}

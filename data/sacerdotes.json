@@ -1,38 +1,38 @@
 [
   {
-    "id": "dom-jose-maria",
-    "nome": "José Maria da Silva",
+    "id": "dom-gilberto-pastana",
+    "nome": "Gilberto Pastana de Oliveira",
     "titulo": "Dom",
-    "cargo": "Bispo Diocesano",
-    "foto": "https://placehold.co/600x800",
-    "bio": "Dom José Maria da Silva nasceu em Caxias, Maranhão, e foi ordenado sacerdote em 1995 pela Diocese de Caxias do Maranhão. Após anos de missão pastoral em diferentes paróquias do estado, foi consagrado bispo em 2014, assumindo a responsabilidade de pastorear o Santuário de São José de Ribamar e toda a região eclesiástica. Com profunda devoção a São José, Dom José Maria imprimiu ao Santuário um espírito de hospitalidade e evangelização que o tornou referência espiritual no Maranhão. Em seu episcopado, dedicou especial atenção à formação dos fiéis, à renovação das celebrações litúrgicas e ao fortalecimento das pastorais sociais, com especial atenção aos mais pobres e vulneráveis da comunidade.",
+    "cargo": "Arcebispo Metropolitano",
+    "foto": "/img/bispo.avif",
+    "bio": "Dom Gilberto Pastana de Oliveira nasceu em Boim (PA), em 29 de julho de 1956. Foi ordenado sacerdote em 27 de julho de 1985, na Paróquia Cristo Libertador de Santarém (PA), e ordenado bispo em 28 de outubro de 2005, na Catedral Nossa Senhora da Conceição de Santarém (PA). Assumiu como bispo diocesano da Diocese de Imperatriz (MA) em 13 de novembro de 2005. Em 18 de maio de 2016, foi nomeado bispo coadjutor para a Diocese de Crato (CE), com apresentação ao povo em 17 de julho do mesmo ano, e assumiu como bispo diocesano em 28 de dezembro de 2016. Em 02 de junho de 2021, foi nomeado arcebispo da Arquidiocese de São Luís, tomando posse em 18 de julho de 2021, no Parque São João Paulo II. É diplomado em Filosofia na Universidade Federal do Pará (1977) e no Instituto de Pastoral Regional-IPAR (1978-1982), diplomado em Teologia no Instituto de Pastoral Regional-IPAR (1979-1982) e mestre em Teologia Espiritual pela Faculdade Teresianum, em Roma (1990-1992). Antes do episcopado, exerceu funções como vigário paroquial de Santo Antônio em Mojuí dos Campos (PA), reitor do Seminário São Pio X em Santarém (PA), coordenador diocesano de pastoral da Diocese de Santarém (PA), coordenador do Departamento de Filosofia e Teologia no Instituto de Pastoral Regional-IPAR, vice-reitor do Seminário Maior Interdiocesano São Gaspar, vigário paroquial em Belém (PA), pároco em Santarém (PA), vigário geral da Diocese de Santarém (PA) e diretor da Rede Vida de Televisão. Durante o episcopado, foi bispo referencial para liturgia, CEBs e leigos do Regional NE-V (2005 a 2016), presidente do Regional NE-V (2010 a 2015) e bispo referencial para liturgia e CEBs do Regional NE-I (desde 2016).",
     "bispo": true
   },
   {
     "id": "pe-carlos-eduardo",
-    "nome": "Carlos Eduardo Fonseca",
+    "nome": "Cláudio Roberto",
     "titulo": "Pe.",
-    "cargo": "Pároco",
-    "foto": "https://placehold.co/600x600",
-    "bio": "Pe. Carlos Eduardo Fonseca é natural de São Luís do Maranhão e foi ordenado sacerdote em 2005, depois de completar sua formação no Seminário Nossa Senhora das Graças. Com vocação marcada pela atenção às famílias e aos jovens, assumiu a função de pároco do Santuário em 2019, onde coordena as celebrações eucarísticas, o acompanhamento dos sacramentos e a animação das comunidades de base. Reconhecido por sua proximidade com os fiéis, Pe. Carlos Eduardo é figura presente tanto nas grandes festas litúrgicas quanto nas visitas às comunidades mais distantes da região.",
+    "cargo": "Reitor do Santuário",
+    "foto": "/img/pe_claudio_roberto.PNG",
+    "bio": "Padre Cláudio Roberto Santos Cruz. Nascido em 04 de abril de 1966, em Belém do Pará. Chegou ao Maranhão em 1988. Enquanto seminarista da Arquidiocese de São Luís do Maranhão, residiu no Seminário Arquidiocesano Santo Antônio, fez os estudos de Filosofia e Teologia no IESMA (Instituto de Estudos Superiores do Maranhão). Foi ordenado padre em 27 de janeiro de 1996 por dom Paulo Ponte. É mestre e doutor em Teologia pela Universidade Católica de Angers, na França, onde estudou entre os anos de 1996 e 1999; 2001 e 2003. Colaborou com a Arquidiocese como reitor do Seminário Arquidiocesano Santo Antônio, promotor vocacional e pároco de algumas paróquias. Há vários anos, exerce as funções de professor e coordenador do curso de Teologia do IESMA, membro do conselho presbiteral, do colégio dos consultores da Arquidiocese, diretor da rádio Educadora do Maranhão e reitor do Santuário Arquidiocesano São José de Ribamar.",
     "bispo": false
   },
   {
-    "id": "pe-andre-luis",
-    "nome": "André Luís Marques",
+    "id": "pe-danylo-fontinele",
+    "nome": "Padre Danylo Fontinele",
     "titulo": "Pe.",
-    "cargo": "Vigário Paroquial",
-    "foto": "https://placehold.co/600x600",
-    "bio": "Pe. André Luís Marques nasceu em Imperatriz, Maranhão, e ingressou na vida sacerdotal em 2010, após sentir o chamado durante sua participação na Pastoral da Juventude. Como vigário paroquial, auxilia diretamente na administração sacramental e na catequese de adultos, além de coordenar os grupos de oração do Santuário. Pe. André Luís tem especial apreço pela tradição das festas marianas e pela devoção popular, contribuindo para que o patrimônio espiritual do Santuário seja transmitido às novas gerações com fidelidade e criatividade.",
+    "cargo": "Pároco Solidário",
+    "foto": "/img/pe_danilo_fontenele.PNG",
+    "bio": "Pe. Danylo Fontinele nasceu em Imperatriz, Maranhão, e ingressou na vida sacerdotal em 2010, após sentir o chamado durante sua participação na Pastoral da Juventude. Como vigário paroquial, auxilia diretamente na administração sacramental e na catequese de adultos, além de coordenar os grupos de oração do Santuário. Pe. Danylo tem especial apreço pela tradição das festas marianas e pela devoção popular, contribuindo para que o patrimônio espiritual do Santuário seja transmitido às novas gerações com fidelidade e criatividade.",
     "bispo": false
   },
   {
-    "id": "pe-thiago-costa",
-    "nome": "Thiago Costa Ribeiro",
+    "id": "pe-joao-pedro",
+    "nome": "João Pedro de Jesus dos Reis Fonseca",
     "titulo": "Pe.",
-    "cargo": "Capelão",
-    "foto": "https://placehold.co/600x600",
-    "bio": "Pe. Thiago Costa Ribeiro é o mais jovem do corpo sacerdotal do Santuário, ordenado em 2018 pela Arquidiocese de São Luís. Exercendo o ministério de capelão, Pe. Thiago dedica-se especialmente ao acompanhamento espiritual dos peregrinos, às confissões e ao serviço de assistência religiosa aos enfermos e idosos da comunidade. Sua presença discreta e seu testemunho de vida simples têm conquistado a confiança de inúmeros fiéis que buscam orientação espiritual no Santuário.",
+    "cargo": "Pároco Solidário",
+    "foto": "/img/pe_joao_pedro.PNG",
+    "bio": "Pe. João Pedro de Jesus dos Reis Fonseca é o mais jovem do corpo sacerdotal do Santuário, ordenado em 2018 pela Arquidiocese de São Luís. Exercendo o ministério de capelão, Pe. João Pedro dedica-se especialmente ao acompanhamento espiritual dos peregrinos, às confissões e ao serviço de assistência religiosa aos enfermos e idosos da comunidade. Sua presença discreta e seu testemunho de vida simples têm conquistado a confiança de inúmeros fiéis que buscam orientação espiritual no Santuário.",
     "bispo": false
   }
 ]

@@ -10,8 +10,8 @@ interface CalendarioSectionProps {
 
 const tipoColors: Record<AgendaItem['tipo'], string> = {
   festivo: 'bg-gold text-white',
-  padroeiro: 'bg-burgundy text-white',
-  liturgico: 'bg-text-soft/20 text-text',
+  padroeiro: 'bg-gold-bright text-burgundy-dk',
+  liturgico: 'bg-white/20 text-white ring-1 ring-white/30',
 }
 
 const tipoLabels: Record<AgendaItem['tipo'], string> = {
@@ -30,10 +30,11 @@ export default function CalendarioSection({ agenda }: CalendarioSectionProps) {
           light
         />
         <div className="space-y-4 max-w-3xl mx-auto">
-          {agenda.map((item) => (
+          {agenda.map((item, i) => (
             <div
               key={`${item.dia}-${item.mes}`}
-              className="flex items-center gap-5 bg-white/10 backdrop-blur-sm rounded-xl p-5 hover:bg-white/15 transition-colors"
+              className="reveal flex items-center gap-5 bg-white/10 backdrop-blur-sm rounded-xl p-5 hover:bg-white/15 transition-colors"
+              style={{ transitionDelay: `${i * 100}ms` }}
             >
               <div className="shrink-0 w-16 h-16 rounded-xl bg-gold/20 flex flex-col items-center justify-center text-white">
                 <span className="font-serif text-2xl font-bold leading-none">{item.dia}</span>

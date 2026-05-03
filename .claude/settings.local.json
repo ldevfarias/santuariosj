@@ -1,0 +1,21 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(npx tsc *)",
+      "Bash(node -e ' *)",
+      "Bash(xargs grep *)",
+      "Bash(node -e \"const icons = Object.keys\\(require\\('lucide-react'\\)\\); console.log\\(icons.filter\\(i => i.toLowerCase\\(\\).includes\\('instagram'\\) || i.toLowerCase\\(\\).includes\\('facebook'\\) || i.toLowerCase\\(\\).includes\\('youtube'\\) || i.toLowerCase\\(\\).includes\\('message'\\)\\).join\\('\\\\n'\\)\\)\")",
+      "Bash(node -e \"const icons = Object.keys\\(require\\('lucide-react'\\)\\).filter\\(i => !i.includes\\('Icon'\\) && !i.includes\\('Lucide'\\)\\); const socialLike = icons.filter\\(i => i.match\\(/Share|Link|Globe|Square|Circle|Send/i\\)\\); console.log\\(socialLike.slice\\(0, 20\\).join\\('\\\\n'\\)\\)\")",
+      "Bash(git -C /c/Users/luka/workspace/santuarioSJ add components/sections/SobreSection.tsx components/sections/NoticiasSection.tsx components/sections/SaoJoseSection.tsx)",
+      "Bash(git -C /c/Users/luka/workspace/santuarioSJ commit -m ' *)",
+      "Bash(node -e \"const z = require\\('zod'\\); const r = z.object\\({a: z.string\\(\\)}\\).safeParse\\({}\\); console.log\\(JSON.stringify\\(Object.keys\\(r.error\\)\\)\\)\")",
+      "Bash(powershell -Command ' *)",
+      "Bash(node -e \"require\\('@bprogress/next/app'\\)\")",
+      "Bash(npm list *)",
+      "Bash(python3 -c \"import sys,json; d=json.load\\(sys.stdin\\); print\\('version:', d.get\\('version'\\)\\); print\\('exports:', json.dumps\\(d.get\\('exports', {}\\), indent=2\\)\\)\")"
+    ],
+    "additionalDirectories": [
+      "c:\\Users\\luka\\.gemini\\antigravity\\playground\\workspace\\docs\\superpowers\\plans"
+    ]
+  }
+}

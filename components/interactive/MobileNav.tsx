@@ -16,9 +16,11 @@ const navItems: NavItem[] = [
     label: 'O Santuário',
     href: '/#sobre',
     children: [
+      { label: 'Administração', href: '/episcopal' },
       { label: 'História', href: '/#historia' },
-      { label: 'Estrutura', href: '/#sobre' },
       { label: 'Devoções', href: '/#devocoes' },
+      { label: 'Horários de Missa', href: '/#horarios' },
+      { label: 'Calendário Litúrgico', href: '/#calendario' },
     ],
   },
   {
@@ -38,7 +40,6 @@ const navItems: NavItem[] = [
       { label: 'Grupos e Movimentos', href: '/#pastoral' },
     ],
   },
-  { label: 'Administração', href: '/episcopal' },
   { label: 'Contato', href: '/#contato' },
 ]
 

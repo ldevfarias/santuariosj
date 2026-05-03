@@ -1,4 +1,4 @@
-import { Calendar, ArrowRight } from 'lucide-react'
+import { ArrowRight, Calendar } from 'lucide-react'
 
 import Image from 'next/image'
 import Link from 'next/link'
@@ -20,12 +20,12 @@ export default function NoticiasSection({ noticias }: NoticiasSectionProps) {
           subtitle="Fique por dentro das novidades do Santuário"
         />
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-          {noticias.map((noticia) => (
+          {noticias.map((noticia, i) => (
             <article
               key={noticia.id}
-              className={`bg-cream rounded-xl overflow-hidden shadow-md hover:shadow-xl transition-shadow ${
-                noticia.destaque ? 'md:col-span-1 md:row-span-1' : ''
-              }`}
+              className={`reveal bg-cream rounded-xl overflow-hidden shadow-md hover:shadow-xl transition-shadow ${noticia.destaque ? 'md:col-span-1 md:row-span-1' : ''
+                }`}
+              style={{ transitionDelay: `${i * 120}ms` }}
             >
               <div className="relative aspect-video overflow-hidden">
                 <Image

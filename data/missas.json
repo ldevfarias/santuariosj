@@ -3,29 +3,30 @@
     "dia": "Segunda a Sexta",
     "icone": "Sun",
     "horarios": [
-      { "hora": "07h00", "desc": "Missa Matinal" },
-      { "hora": "12h00", "desc": "Missa do Meio-Dia" },
-      { "hora": "19h00", "desc": "Missa Vespertina" }
+      { "hora": "15h00", "desc": "1ª Missa" },
+      { "hora": "17h00", "desc": "2ª Missa" }
     ]
   },
   {
     "dia": "Sábado",
-    "destaque": true,
     "icone": "Star",
     "horarios": [
-      { "hora": "07h00", "desc": "Missa Matinal" },
-      { "hora": "16h00", "desc": "Missa das Crianças" },
-      { "hora": "19h00", "desc": "Missa Vigília" }
+      { "hora": "10h00", "desc": "1ª Missa" },
+      { "hora": "15h00", "desc": "2ª Missa" },
+      { "hora": "17h00", "desc": "3ª Missa" }
     ]
   },
   {
     "dia": "Domingo",
-    "icone": "Bird",
+    "destaque": true,
+    "icone": "Church",
     "horarios": [
-      { "hora": "07h00", "desc": "1ª Missa" },
-      { "hora": "09h00", "desc": "2ª Missa" },
-      { "hora": "11h00", "desc": "Missa das Famílias" },
-      { "hora": "18h00", "desc": "Missa Solene" }
+      { "hora": "06h00", "desc": "1ª Missa" },
+      { "hora": "08h30", "desc": "2ª Missa" },
+      { "hora": "10h00", "desc": "Batizados" },
+      { "hora": "15h00", "desc": "3ª Missa" },
+      { "hora": "17h00", "desc": "4ª Missa" },
+      { "hora": "18h30", "desc": "5ª Missa" }
     ]
   }
 ]

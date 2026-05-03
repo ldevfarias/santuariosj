@@ -1,0 +1,52 @@
+[
+  {
+    "slug": "house-of-miracles",
+    "titulo": "Casa dos Milagres",
+    "descricaoHero": "Idealizada para abrigar objetos dedicados a São José de Ribamar, a Casa dos Milagres permanece como lugar de memória, gratidão e fé.",
+    "resumoArtigo": "Construído em 1895 como Salão das Graças, o espaço foi restaurado após a reforma de 2001 e hoje acolhe os fiéis também como loja oficial do Santuário.",
+    "paragrafos": [
+      "Idealizada para abrigar objetos dedicados a São José de Ribamar, o Salão das Graças, primeiro nome dado ao espaço, foi construído em 1895 e, em pouco tempo, foi tomado por peças de pessoas de vários lugares do Maranhão.",
+      "Após a grande reforma de 2001, as peças foram realocadas para o Museu dos Ex-votos e o prédio foi restaurado para abrigar a loja oficial do Santuário de São José de Ribamar.",
+      "Visite a Casa dos Milagres e adquira bíblias, vestuário, imagens em gesso, livros, CDs, objetos em cera, artesanatos e artigos religiosos em geral. Atendimento ao público de segunda a sábado das 8h às 12h e das 14h às 18h. Também aos domingos, das 7h30 às 18h30.",
+      "Mais informações, ligue para a Casa dos Milagres: (98) 3224-1147.",
+      "\"A Santa Mãe Igreja instituiu também os sacramentais. Estes são sinais sagrados por meio dos quais, imitando de algum modo os sacramentos, se significam e se obtêm, pela oração da Igreja, efeitos principalmente de ordem espiritual.\" (C.I.C. 1667)"
+    ],
+    "imagemSrc": "/img/casa_milages.avif",
+    "imagemAlt": "Casa dos Milagres no Santuário de São José de Ribamar",
+    "href": "/devocoes/house-of-miracles"
+  },
+  {
+    "slug": "house-of-candles",
+    "titulo": "Casa das Velas",
+    "descricaoHero": "Lugar de oração e entrega, onde a chama da vela recorda Cristo Ressuscitado e sustenta a esperança dos devotos.",
+    "resumoArtigo": "Na Casa das Velas, o povo peregrino expressa amor a Deus e devoção a São José de Ribamar por meio de um gesto simples, antigo e profundamente cristão.",
+    "paragrafos": [
+      "As velas são acesas simbolicamente como sacrifício e devoção. O Evangelho de Mateus ensina que o cristão deve ser luz no mundo (Mt 5, 14-16), por isso tem a responsabilidade de propagá-la.",
+      "No Batismo, cada fiel recebe a luz de Cristo, nossa Páscoa, e assume o compromisso de ser luz do mundo por palavras e atitudes. Se a chama da vela representa o Cristo Ressuscitado, a cera lembra a vida do cristão, chamada a se consumir por Cristo, com Cristo e em Cristo, como testemunhou São José.",
+      "Partindo dessa compreensão, a Igreja estimula o gesto de acender velas. No projeto de reforma da Basílica São José, nome original do templo, foi construída em 1998 a Capela das Velas, posteriormente conhecida como Casa das Velas e hoje corretamente chamada de Acendedor de Velas.",
+      "Muitos devotos vivem a oração com a vela como prova de amor a Deus e de devoção a São José de Ribamar. Por isso, esse espaço é visitado diariamente, especialmente aos domingos.",
+      "Durante o festejo do santo padroeiro, a Casa das Velas transforma-se em um grande candeeiro, sinal visível da fé do povo maranhense."
+    ],
+    "imagemSrc": "/img/casas_velas.avif",
+    "imagemAlt": "Casa das Velas no Santuário de São José de Ribamar",
+    "imagemSecundariaSrc": "/img/casa_velas_devoto.avif",
+    "imagemSecundariaAlt": "Devoto em oração na Casa das Velas",
+    "href": "/devocoes/house-of-candles"
+  },
+  {
+    "slug": "ex-voto-museum",
+    "titulo": "Museu dos Ex-votos",
+    "descricaoHero": "Com acervo catalogado e profundamente devocional, o museu preserva a memória agradecida dos romeiros de São José de Ribamar.",
+    "resumoArtigo": "No Museu dos Ex-votos, cada peça oferecida testemunha graças, bênçãos, curas e milagres concedidos por Deus, pela intercessão de São José de Ribamar.",
+    "paragrafos": [
+      "Com um acervo catalogado, que possui desde mechas de cabelo e fardamentos militares até réplicas de monumentos, como a igreja matriz, o Museu dos Ex-votos abriga numerosos objetos devocionais.",
+      "São artefatos que simbolizam a gratidão dos romeiros e devotos de São José de Ribamar pelas graças, bênçãos, curas e milagres concedidos por Deus, através da intercessão do santo padroeiro do Maranhão, São José de Ribamar.",
+      "O museu está localizado ao lado da Concha Acústica, abaixo do monumento a São José.",
+      "Este espaço foi construído para receber os ex-votos dos romeiros que, anteriormente, eram deixados na Casa dos Milagres e recolhidos pelos sacristãos.",
+      "O Museu dos Ex-votos está aberto para visitação de terça-feira a sábado, das 9h às 11h30 e das 16h às 17h30; aos domingos, das 8h às 12h."
+    ],
+    "imagemSrc": "/img/museu_1.PNG",
+    "imagemAlt": "Acervo do Museu dos Ex-votos no Santuário de São José de Ribamar",
+    "href": "/devocoes/ex-voto-museum"
+  }
+]

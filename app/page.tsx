@@ -14,7 +14,6 @@ import SobreSection from '@/components/sections/SobreSection'
 import NoticeBar from '@/components/ui/NoticeBar'
 import {
   getAgenda,
-  getDevocoes,
   getGrupos,
   getMissas,
   getNoticias,
@@ -40,7 +39,6 @@ export default function HomePage() {
   const noticias = getNoticias()
   const sacramentos = getSacramentos()
   const grupos = getGrupos()
-  const devocoes = getDevocoes()
 
   return (
     <>
@@ -53,7 +51,7 @@ export default function HomePage() {
       <SaoJoseSection />
       <SacramentosSection sacramentos={sacramentos} />
       <PastoralSection grupos={grupos} />
-      <DevocoesSection lista={devocoes.lista} cards={devocoes.cards} />
+      <DevocoesSection />
       <CitacaoSection />
       <ContatoSection />
     </>

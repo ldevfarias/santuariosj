@@ -1,9 +1,158 @@
 [
-  { "id": "batismo", "nome": "Batismo", "icone": "Droplets", "descricao": "O sacramento do nascimento para a vida nova em Cristo. Agende o batismo do seu filho.", "cta": "Agendar", "href": "#contato" },
-  { "id": "crisma", "nome": "Crisma", "icone": "Feather", "descricao": "A confirmação da fé. Inscrições abertas para os grupos de crisma do Santuário.", "cta": "Inscrever-se", "href": "#contato" },
-  { "id": "eucaristia", "nome": "Eucaristia", "icone": "Wheat", "descricao": "O centro da vida cristã. Participe das missas diárias e dominicais no Santuário.", "cta": "Ver horários", "href": "#horarios" },
-  { "id": "confissao", "nome": "Confissão", "icone": "HandHeart", "descricao": "O sacramento da reconciliação e do perdão. Confissões disponíveis antes de cada missa.", "cta": "Horários", "href": "#horarios" },
-  { "id": "matrimonio", "nome": "Matrimônio", "icone": "Heart", "descricao": "A aliança sagrada entre duas pessoas diante de Deus. Agende sua preparação.", "cta": "Agendar", "href": "#contato" },
-  { "id": "uncao", "nome": "Unção dos Enfermos", "icone": "Flame", "descricao": "Graça de conforto e cura para os que sofrem. Atendimento sob solicitação.", "cta": "Solicitar", "href": "#contato" },
-  { "id": "ordem", "nome": "Ordem", "icone": "Cross", "descricao": "O sacramento pelo qual homens são consagrados ao serviço sagrado de Deus e da Igreja.", "cta": "Saiba mais", "href": "#contato" }
+  {
+    "id": "baptism",
+    "slug": "baptism",
+    "nome": "Batismo",
+    "icone": "Droplets",
+    "descricao": "Pelo Batismo somos libertos do pecado e regenerados como filhos de Deus: tornamo-nos membros de Cristo e somos incorporados na Igreja e tornados participantes na sua missão (C.I.C. 1213).",
+    "descricaoItalico": true,
+    "descricaoLonga": "O Batismo é o primeiro e fundamental sacramento da vida cristã, pelo qual nascemos para a vida nova em Cristo e somos incorporados à Igreja. Pela imersão ou derramamento de água com a invocação da Santíssima Trindade, os pecados são perdoados e o batizado recebe o Espírito Santo.",
+    "requisitos": [
+      "Pelo menos um dos pais deve ser católico praticante",
+      "Participação no encontro de preparação para o Batismo",
+      "Escolha de padrinhos que sejam católicos confirmados e praticantes",
+      "Documentação: certidão de nascimento da criança e documentos dos pais e padrinhos"
+    ],
+    "agendamento": "Os batizados ocorrem regularmente no Santuário. Para participar, é necessário cumprir os requisitos abaixo e encaminhar a documentação com antecedência.",
+    "agendamentoItens": [
+      "Batizados realizados todos os sábados e domingos, às 10h",
+      "É obrigatória a participação prévia no Curso de Batismo",
+      "A documentação exigida deve ser entregue na secretaria com pelo menos 1 semana de antecedência em relação à data escolhida"
+    ],
+    "agendamentoContato": "Secretaria Paroquial: (98) 3224-1147",
+    "cta": "Agendar",
+    "href": "/sacramentos/baptism"
+  },
+  {
+    "id": "confirmation",
+    "slug": "confirmation",
+    "nome": "Crisma",
+    "icone": "Wind",
+    "descricao": "Mas recebereis poder, ao descer sobre vós o Espírito Santo, e sereis minhas testemunhas... (At 1,8).",
+    "descricaoItalico": true,
+    "descricaoLonga": "A Crisma (Confirmação) é o sacramento pelo qual o batizado recebe plenamente o Espírito Santo, confirmando e fortalecendo a graça do Batismo. O crismado é selado com o dom do Espírito Santo e torna-se testemunha adulta da fé cristã no mundo.",
+    "requisitos": [
+      "Ter sido batizado e ter feito a Primeira Eucaristia",
+      "Participar da catequese de Crisma (duração de aproximadamente um ano)",
+      "Frequência mínima de 75% nas aulas e encontros",
+      "Escolha de um padrinho ou madrinha católico confirmado",
+      "Participação em retiro espiritual antes da celebração"
+    ],
+    "agendamento": "As inscrições para os grupos de Crisma abrem no início do ano pastoral. Procure a secretaria paroquial ou fique atento aos avisos nas missas para saber as datas de matrícula.",
+    "agendamentoItens": [
+      "A catequese paroquial ocorre aos sábados, a partir das 15h, para crianças, adolescentes, jovens e adultos.",
+      "O início das atividades aos sábados se dá com a santa missa das 15h, no Santuário."
+    ],
+    "agendamentoContato": "Secretaria Paroquial: (98) 3224-1147",
+    "cta": "Saiba mais",
+    "href": "/sacramentos/confirmation"
+  },
+  {
+    "id": "eucharist",
+    "slug": "eucharist",
+    "nome": "Eucaristia",
+    "icone": "Wheat",
+    "descricao": "Eu sou o pão vivo descido do céu. Quem comer deste pão viverá eternamente. (Jo 6,51).",
+    "descricaoItalico": true,
+    "descricaoLonga": "A Eucaristia é o coração e o centro de toda a vida cristã. Nela, Cristo se faz verdadeiramente presente sob as espécies do pão e do vinho. A Primeira Eucaristia marca a plena iniciação do cristão na vida sacramental da Igreja e é celebrada com solenidade após o período de catequese.",
+    "requisitos": [
+      "Ter sido batizado na fé católica",
+      "Concluir a catequese de Primeira Eucaristia (geralmente 2 anos)",
+      "Frequência às aulas e participação nas missas durante o período de preparação",
+      "Ter se confessado antes da celebração da Primeira Eucaristia",
+      "Mínimo de 7 anos de idade (uso da razão)"
+    ],
+    "agendamento": "A Primeira Eucaristia é celebrada anualmente em data definida pela paróquia, geralmente no primeiro semestre. As inscrições para a catequese ocorrem no início do ano. Consulte a secretaria para mais informações.",
+    "agendamentoItens": [
+      "A catequese paroquial ocorre aos sábados, a partir das 15h, para crianças, adolescentes, jovens e adultos.",
+      "Dentro da formação catecumenal, os catequizandos são iniciados na fé para viverem conscientemente sua vida cristã.",
+      "O início das atividades aos sábados se dá com a santa missa das 15h, no Santuário."
+    ],
+    "agendamentoContato": "Secretaria Paroquial: (98) 3224-1147",
+    "cta": "Saiba mais",
+    "href": "/sacramentos/eucharist"
+  },
+  {
+    "id": "confession",
+    "slug": "confession",
+    "nome": "Confissão",
+    "icone": "ShieldCheck",
+    "descricao": "O princípio das obras boas é a confissão das más. Praticaste a verdade e vens à luz. (C.I.C. 56).",
+    "descricaoItalico": true,
+    "descricaoLonga": "A Confissão (Penitência ou Reconciliação) é o sacramento pelo qual Deus, pelo ministério do sacerdote, perdoa os pecados cometidos após o Batismo. Pelo arrependimento sincero, a confissão dos pecados e a satisfação imposta, o fiel é reconciliado com Deus e com a Igreja.",
+    "requisitos": [
+      "Exame de consciência sincero antes da celebração",
+      "Arrependimento genuíno pelos pecados cometidos",
+      "Propósito firme de não reincidir e de reparar os danos causados",
+      "Confissão oral e íntegra de todos os pecados graves ao sacerdote",
+      "Cumprimento da penitência imposta pelo confessor"
+    ],
+    "agendamento": "O Santuário dispõe de dois confessionários para atendimento durante a semana e aos domingos.",
+    "agendamentoItens": [
+      "Atendimento de terça a domingo, das 8h30 às 11h30",
+      "Atendimento de terça a domingo, das 15h às 16h45",
+      "Aos domingos, também durante as celebrações"
+    ],
+    "agendamentoContato": "Secretaria Paroquial: (98) 3224-1147",
+    "cta": "Ver horários",
+    "href": "/sacramentos/confession"
+  },
+  {
+    "id": "matrimony",
+    "slug": "matrimony",
+    "nome": "Matrimônio",
+    "icone": "Heart",
+    "descricao": "Por isso o homem deixará seu pai e sua mãe e se unirá à sua mulher, e os dois serão uma só carne. (Ef 5,31).",
+    "descricaoItalico": true,
+    "descricaoLonga": "O Matrimônio é o sacramento pelo qual o homem e a mulher, batizados, constituem entre si uma aliança indissolúvel, ordenada ao bem dos cônjuges e à geração e educação dos filhos. O amor conjugal torna-se, pelo sacramento, reflexo do amor de Cristo pela Igreja.",
+    "requisitos": [
+      "Ambos os noivos devem ser batizados (ao menos o nubente católico)",
+      "Estar livres de impedimentos canônicos",
+      "Participar do Curso de Noivos (com duração média de 3 a 4 meses)",
+      "Documentação: certidão de batismo recente, certidão de nascimento, RG e comprovante de residência",
+      "Agendamento com pelo menos 6 meses de antecedência"
+    ],
+    "agendamento": "Procure a secretaria paroquial com antecedência mínima de 6 meses. A preparação inclui encontros do Curso de Noivos e entrevistas com o sacerdote. Consulte a disponibilidade de datas para a celebração.",
+    "agendamentoContato": "Secretaria Paroquial: (98) 3224-1147",
+    "cta": "Agendar",
+    "href": "/sacramentos/matrimony"
+  },
+  {
+    "id": "anointing-of-the-sick",
+    "slug": "anointing-of-the-sick",
+    "nome": "Unção dos Enfermos",
+    "icone": "HeartPulse",
+    "descricao": "Graça de conforto e cura para os que sofrem. Atendimento sob solicitação.",
+    "descricaoLonga": "A Unção dos Enfermos é o sacramento destinado àqueles que se encontram gravemente enfermos, em perigo de morte ou em idade avançada. Pela unção com o óleo bento e a oração do sacerdote, Deus oferece ao enfermo graças especiais de conforto, paz, coragem e, se for da vontade divina, cura física.",
+    "requisitos": [
+      "Ser batizado e encontrar-se em estado grave de enfermidade ou fragilidade por idade avançada",
+      "O sacramento pode ser recebido mais de uma vez, inclusive na mesma doença se houver agravamento",
+      "Em caso de perigo de morte iminente, pode ser ministrado mesmo ao inconsciente",
+      "Preferencialmente acompanhado da Confissão e da Eucaristia (Viático)"
+    ],
+    "agendamento": "Para solicitar a Unção dos Enfermos em domicílio ou hospital, entre em contato com a secretaria paroquial ou ligue diretamente. Em situações de emergência, informe a urgência para atendimento prioritário.",
+    "agendamentoContato": "Secretaria Paroquial: (98) 3224-1147",
+    "cta": "Solicitar",
+    "href": "/sacramentos/anointing-of-the-sick"
+  },
+  {
+    "id": "holy-orders",
+    "slug": "holy-orders",
+    "nome": "Ordem Sagrada",
+    "icone": "Cross",
+    "descricao": "Não negligencies o dom que há em ti, o qual te foi dado por profecia com a imposição das mãos do presbitério. (1 Tm 4,14).",
+    "descricaoItalico": true,
+    "descricaoLonga": "A Ordem Sagrada é o sacramento pelo qual a missão confiada por Cristo aos apóstolos continua a ser exercida na Igreja. O sacramento confere um poder sagrado — o de oferecer o sacrifício eucarístico, absolver pecados e governar o povo de Deus. Confere-se em três graus: episcopado, presbiterado e diaconado.",
+    "requisitos": [
+      "Ser homem batizado e confirmado na fé católica",
+      "Sentir um chamado vocacional discernido com o auxílio espiritual",
+      "Estar psicologicamente e moralmente apto segundo as normas da Igreja",
+      "Concluir os estudos filosóficos e teológicos no Seminário",
+      "Ser aceito pelo Bispo diocesano ou pelo Superior religioso competente"
+    ],
+    "agendamento": "Se você sente um chamado para a vida sacerdotal ou diaconal, procure o pároco ou o responsável pela pastoral vocacional da Arquidiocese. O primeiro passo é iniciar o acompanhamento espiritual e vocacional.",
+    "agendamentoContato": "Secretaria Paroquial: (98) 3224-1147",
+    "cta": "Saiba mais",
+    "href": "/sacramentos/holy-orders"
+  }
 ]

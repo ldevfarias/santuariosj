@@ -1,4 +1,4 @@
-import { Church, ChevronDown } from 'lucide-react'
+import { Church } from 'lucide-react'
 
 import Link from 'next/link'
 
@@ -17,7 +17,7 @@ export default function HeroSection() {
       <div className="absolute inset-0 bg-black/50 z-[1]" />
 
       {/* Content */}
-      <div className="relative z-[2] text-center text-white px-4 max-w-3xl mx-auto">
+      <div className="hero-content relative z-[2] text-center text-white px-4 max-w-3xl mx-auto">
         <h1 className="font-serif text-[clamp(2rem,6vw,4rem)] font-bold leading-tight mb-4">
           Santuário de{' '}
           <span className="text-gold-bright">São José de Ribamar</span>
@@ -42,14 +42,6 @@ export default function HeroSection() {
             Conheça o Santuário
           </Link>
         </div>
-      </div>
-
-      {/* Scroll indicator */}
-      <div className="absolute bottom-20 left-1/2 -translate-x-1/2 z-[2] flex flex-col items-center gap-1 text-white/70 text-xs">
-        <div className="w-6 h-10 rounded-full border-2 border-white/40 flex items-start justify-center pt-1.5">
-          <div className="w-1.5 h-1.5 rounded-full bg-white/70 animate-bounce" />
-        </div>
-        <span>Role para baixo</span>
       </div>
     </section>
   )

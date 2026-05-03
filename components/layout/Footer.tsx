@@ -1,6 +1,8 @@
-import { Church, Camera, Users, Play, MessageCircle } from 'lucide-react'
+import Image from 'next/image'
 
 import Link from 'next/link'
+
+import { FacebookIcon, InstagramIcon, WhatsAppIcon, YouTubeIcon } from '../ui/SocialBrandIcons'
 
 export default function Footer() {
   return (
@@ -10,9 +12,13 @@ export default function Footer() {
           {/* Brand */}
           <div className="lg:col-span-1">
             <div className="flex items-center gap-3 mb-4">
-              <div className="w-10 h-10 rounded-full bg-burgundy flex items-center justify-center">
-                <Church size={20} className="text-gold-bright" />
-              </div>
+              <Image
+                src="/img/logo_sj-removebg-preview.png"
+                alt="Logo Santuário de São José de Ribamar"
+                width={48}
+                height={48}
+                className="w-12 h-12 object-contain"
+              />
               <div>
                 <p className="font-serif text-sm font-bold text-gold-bright">Santuário</p>
                 <p className="text-xs text-white/70">São José de Ribamar</p>
@@ -23,18 +29,20 @@ export default function Footer() {
             </p>
             <div className="flex gap-3">
               {[
-                { href: '#', icon: Camera, label: 'Instagram' },
-                { href: '#', icon: Users, label: 'Facebook' },
-                { href: '#', icon: Play, label: 'YouTube' },
-                { href: '#', icon: MessageCircle, label: 'WhatsApp' },
+                { href: 'https://www.instagram.com/santuarioribamar/', icon: InstagramIcon, label: 'Instagram' },
+                { href: 'https://www.facebook.com/santuario.ribamar/', icon: FacebookIcon, label: 'Facebook' },
+                { href: 'https://www.youtube.com/santuarioribamar/', icon: YouTubeIcon, label: 'YouTube' },
+                { href: 'https://api.whatsapp.com/send?phone=5598989114019&text=A%20Par%C3%B3quia%20Santu%C3%A1rio%20S%C3%A3o%20Jos%C3%A9%20de%20Ribamar%20agradece%20seu%20contato.%20Como%20podemos%20ajudar%3F', icon: WhatsAppIcon, label: 'WhatsApp' },
               ].map(({ href, icon: Icon, label }) => (
                 <a
                   key={label}
                   href={href}
                   aria-label={label}
-                  className="w-9 h-9 rounded-full bg-white/10 flex items-center justify-center hover:bg-gold hover:text-burgundy-dk transition-all"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="w-9 h-9 rounded-full bg-white/10 flex items-center justify-center hover:bg-gold hover:text-white transition-all"
                 >
-                  <Icon size={16} />
+                  <Icon className="w-4 h-4" />
                 </a>
               ))}
             </div>
@@ -45,27 +53,25 @@ export default function Footer() {
             {
               title: 'O Santuário',
               links: [
-                { label: 'História', href: '#historia' },
-                { label: 'São José de Ribamar', href: '#sao-jose' },
-                { label: 'Estrutura', href: '#sobre' },
+                { label: 'História', href: '/#historia' },
+                { label: 'Devoções', href: '/#devocoes' },
+                { label: 'Administração', href: '/episcopal' },
               ],
             },
             {
               title: 'Liturgia',
               links: [
-                { label: 'Horários das Missas', href: '#horarios' },
-                { label: 'Sacramentos', href: '#sacramentos' },
-                { label: 'Agenda Litúrgica', href: '#calendario' },
-                { label: 'Devoções', href: '#devocoes' },
+                { label: 'Horários das Missas', href: '/#horarios' },
+                { label: 'Sacramentos', href: '/#sacramentos' },
+                { label: 'Agenda Litúrgica', href: '/#calendario' },
               ],
             },
             {
               title: 'Pastoral',
               links: [
-                { label: 'Grupos e Movimentos', href: '#pastoral' },
-                { label: 'Peregrinações', href: '#devocoes' },
-                { label: 'Notícias', href: '#noticias' },
-                { label: 'Contato', href: '#contato' },
+                { label: 'Grupos e Movimentos', href: '/#pastoral' },
+                { label: 'Notícias', href: '/#noticias' },
+                { label: 'Contato', href: '/#contato' },
               ],
             },
           ].map((col) => (

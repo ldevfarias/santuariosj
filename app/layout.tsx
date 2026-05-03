@@ -5,6 +5,7 @@ import type { Metadata } from 'next'
 import BackToTop from '@/components/interactive/BackToTop'
 import HashScrollFix from '@/components/interactive/HashScrollFix'
 import ProgressBar from '@/components/interactive/ProgressBar'
+import ScrollReveal from '@/components/interactive/ScrollReveal'
 import Footer from '@/components/layout/Footer'
 import Header from '@/components/layout/Header'
 import Topbar from '@/components/layout/Topbar'
@@ -111,6 +112,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         <main>{children}</main>
         <Footer />
         <BackToTop />
+        <ScrollReveal />
         <HashScrollFix />
       </body>
     </html>

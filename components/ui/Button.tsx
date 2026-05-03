@@ -31,7 +31,7 @@ export default function Button({
   disabled = false,
 }: ButtonProps) {
   const base =
-    'inline-flex items-center gap-2 px-6 py-3 rounded font-body font-semibold text-sm tracking-wide transition-all duration-300'
+    'inline-flex items-center gap-2 px-6 py-3 rounded font-body font-semibold text-sm tracking-wide transition-all duration-300 active:scale-[0.97]'
   const classes = `${base} ${variants[variant]} ${full ? 'w-full justify-center' : ''} ${className}`
 
   if (href) {
