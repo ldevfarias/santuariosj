@@ -1,0 +1,50 @@
+[
+  {
+    "id": "nossa-senhora-das-gracas",
+    "slug": "nossa-senhora-das-gracas",
+    "nome": "Nossa Senhora das Graças",
+    "bairro": "Campina",
+    "celebracao": "Todos os sábados às 19h",
+    "mapaUrl": "https://www.google.com.br/maps?daddr=-2.557672,-44.061626&hl=pt-BR&ll=-2.557532,-44.060288&spn=0.002465,0.004128&sll=-2.557532,-44.0608&sspn=0.002465,0.00515&t=k&mra=mift&mrsp=1&sz=19&z=19",
+    "imagemPrincipal": "/img/capela_nossa_senhora_das_gracas.avif",
+    "imagemPrincipalAlt": "Capela da comunidade Nossa Senhora das Graças",
+    "imagemSecundaria": "/img/nossa_senhora.avif",
+    "imagemSecundariaAlt": "Imagem devocional de Nossa Senhora das Graças"
+  },
+  {
+    "id": "santa-maria",
+    "slug": "santa-maria",
+    "nome": "Santa Maria",
+    "bairro": "Olho D'Água",
+    "celebracao": "Segundo e quarto sábados às 19h",
+    "mapaUrl": "https://maps.google.com.br/maps?daddr=-2.551359,-44.05409&hl=pt-BR&sll=-2.551766,-44.053757&sspn=0.002465,0.004128&t=k&mra=mift&mrsp=1&sz=19&z=19",
+    "imagemPrincipal": "/img/capela_santa_maria.avif",
+    "imagemPrincipalAlt": "Capela da comunidade Santa Maria",
+    "imagemSecundaria": "/img/maria.avif",
+    "imagemSecundariaAlt": "Imagem devocional de Santa Maria"
+  },
+  {
+    "id": "sao-benedito",
+    "slug": "sao-benedito",
+    "nome": "Sao Benedito",
+    "bairro": "Sao Benedito",
+    "celebracao": "Todos os domingos às 17h",
+    "mapaUrl": "https://maps.google.com.br/maps?daddr=-2.549486,-44.058835&hl=pt-BR&sll=-2.550212,-44.05815&sspn=0.002465,0.004128&t=k&mra=mift&mrsp=1&sz=19&z=19",
+    "imagemPrincipal": "/img/capela_sao_benedito.avif",
+    "imagemPrincipalAlt": "Capela da comunidade Sao Benedito",
+    "imagemSecundaria": "/img/sao_benedito.avif",
+    "imagemSecundariaAlt": "Imagem devocional de Sao Benedito"
+  },
+  {
+    "id": "sao-francisco-de-assis",
+    "slug": "sao-francisco-de-assis",
+    "nome": "Sao Francisco de Assis",
+    "bairro": "Caura",
+    "celebracao": "Segundo e quarto sábados às 16h",
+    "mapaUrl": "https://www.google.com.br/maps?daddr=-2.554363,-44.050225&hl=pt-BR&sll=-2.554574,-44.050232&sspn=0.002465,0.004128&t=k&mra=mift&mrsp=1&sz=19&z=19",
+    "imagemPrincipal": "/img/capela_sao_francisco.avif",
+    "imagemPrincipalAlt": "Capela da comunidade Sao Francisco de Assis",
+    "imagemSecundaria": "/img/sao_francisco.avif",
+    "imagemSecundariaAlt": "Imagem devocional de Sao Francisco de Assis"
+  }
+]
