@@ -2,15 +2,16 @@ import { readdirSync, readFileSync } from 'fs'
 import { join } from 'path'
 
 import type {
-  AgendaItem,
-  DevocaoPage,
-  DevoItem,
-  Grupo,
-  Historia,
-  Missa,
-  Noticia,
-  Sacerdote,
-  Sacramento,
+    AgendaItem,
+    Comunidade,
+    DevocaoPage,
+    DevoItem,
+    Grupo,
+    Historia,
+    Missa,
+    Noticia,
+    Sacerdote,
+    Sacramento,
 } from './types'
 
 function readJson<T>(filename: string): T {
@@ -36,6 +37,10 @@ export function getSacramentos(): Sacramento[] {
 
 export function getGrupos(): Grupo[] {
   return readJson<Grupo[]>('grupos.json')
+}
+
+export function getComunidades(): Comunidade[] {
+  return readJson<Comunidade[]>('comunidades.json')
 }
 
 export function getDevocoes(): { lista: string[]; cards: DevoItem[] } {

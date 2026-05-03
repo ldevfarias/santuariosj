@@ -52,6 +52,19 @@ export type Grupo = {
   encontro?: string
 }
 
+export type Comunidade = {
+  id: string
+  slug: string
+  nome: string
+  bairro: string
+  celebracao: string
+  mapaUrl: string
+  imagemPrincipal: string
+  imagemPrincipalAlt: string
+  imagemSecundaria: string
+  imagemSecundariaAlt: string
+}
+
 export type Devocao = {
   nome: string
   descricao: string

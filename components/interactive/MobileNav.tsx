@@ -18,6 +18,7 @@ const navItems: NavItem[] = [
     children: [
       { label: 'Administração', href: '/episcopal' },
       { label: 'História', href: '/#historia' },
+      { label: 'Comunidades', href: '/comunidades' },
       { label: 'Devoções', href: '/#devocoes' },
       { label: 'Horários de Missa', href: '/#horarios' },
       { label: 'Calendário Litúrgico', href: '/#calendario' },
@@ -54,7 +55,7 @@ export default function MobileNav({ isOpen, onClose }: MobileNavProps) {
       id="main-nav"
       aria-label="Navegação principal"
       className={`
-        fixed inset-0 top-[120px] bg-white z-40 overflow-y-auto
+        fixed inset-0 top-30 bg-white z-40 overflow-y-auto
         transition-transform duration-300
         ${isOpen ? 'translate-x-0' : 'translate-x-full'}
         lg:static lg:translate-x-0 lg:bg-transparent lg:overflow-visible lg:top-0
@@ -75,7 +76,7 @@ export default function MobileNav({ isOpen, onClose }: MobileNavProps) {
                   {item.label}
                   <ChevronDown size={14} className="transition-transform group-[.open]:rotate-180 lg:group-hover:rotate-180" />
                 </button>
-                <ul className="hidden group-[.open]:block lg:group-hover:block lg:absolute lg:top-full lg:left-0 lg:bg-white lg:shadow-md lg:rounded lg:min-w-[200px] lg:py-2">
+                <ul className="hidden group-[.open]:block lg:group-hover:block lg:absolute lg:top-full lg:left-0 lg:bg-white lg:shadow-md lg:rounded lg:min-w-50 lg:py-2">
                   {item.children.map((child) => (
                     <li key={child.label}>
                       <Link
