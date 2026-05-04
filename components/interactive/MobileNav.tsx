@@ -41,6 +41,14 @@ const navItems: NavItem[] = [
       { label: 'Grupos e Movimentos', href: '/#pastoral' },
     ],
   },
+  {
+    label: 'Secretaria',
+    href: '/secretaria',
+    children: [
+      { label: 'Atendimento dos padres', href: '/secretaria#atendimento-dos-padres' },
+      { label: 'Atendimento Psicológico', href: '/secretaria#apoio-psicologico' },
+    ],
+  },
   { label: 'Contato', href: '/#contato' },
 ]
 

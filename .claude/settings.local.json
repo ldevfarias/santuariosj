@@ -12,7 +12,8 @@
       "Bash(powershell -Command ' *)",
       "Bash(node -e \"require\\('@bprogress/next/app'\\)\")",
       "Bash(npm list *)",
-      "Bash(python3 -c \"import sys,json; d=json.load\\(sys.stdin\\); print\\('version:', d.get\\('version'\\)\\); print\\('exports:', json.dumps\\(d.get\\('exports', {}\\), indent=2\\)\\)\")"
+      "Bash(python3 -c \"import sys,json; d=json.load\\(sys.stdin\\); print\\('version:', d.get\\('version'\\)\\); print\\('exports:', json.dumps\\(d.get\\('exports', {}\\), indent=2\\)\\)\")",
+      "PowerShell($env:CI = 'true'; Set-Location \"C:\\\\Users\\\\luka\\\\workspace\\\\santuarioSJ\"; npx playwright test --reporter=list 2>&1 | Select-Object -Last 80)"
     ],
     "additionalDirectories": [
       "c:\\Users\\luka\\.gemini\\antigravity\\playground\\workspace\\docs\\superpowers\\plans"

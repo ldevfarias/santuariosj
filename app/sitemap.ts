@@ -21,7 +21,13 @@ export default function sitemap(): MetadataRoute.Sitemap {
       priority: 1,
     },
     {
-      url: 'https://santuariosjoser.org.br/sacramentos',
+      url: 'https://santuariosjoser.org.br/comunidades',
+      lastModified: new Date(),
+      changeFrequency: 'monthly',
+      priority: 0.8,
+    },
+    {
+      url: 'https://santuariosjoser.org.br/secretaria',
       lastModified: new Date(),
       changeFrequency: 'monthly',
       priority: 0.8,

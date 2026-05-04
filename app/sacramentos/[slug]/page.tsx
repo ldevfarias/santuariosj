@@ -49,7 +49,7 @@ export default async function SacramentoPage({ params }: Props) {
       <div className="bg-burgundy py-6">
         <div className="container-site flex flex-col gap-2.5">
           <Link
-            href="/sacramentos"
+            href="/#sacramentos"
             className="inline-flex items-center gap-2 text-sm text-gold-bright/80 hover:text-gold-bright font-semibold transition-colors self-start"
           >
             <ArrowLeft size={15} />

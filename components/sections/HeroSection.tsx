@@ -17,27 +17,33 @@ export default function HeroSection() {
       <div className="absolute inset-0 bg-black/50 z-[1]" />
 
       {/* Content */}
-      <div className="hero-content relative z-[2] text-center text-white px-4 max-w-3xl mx-auto">
-        <h1 className="font-serif text-[clamp(2rem,6vw,4rem)] font-bold leading-tight mb-4">
-          Santuário de{' '}
-          <span className="text-gold-bright">São José de Ribamar</span>
+      <div className="hero-content relative z-[2] text-center text-white px-6 max-w-2xl mx-auto w-full mt-12 sm:mt-0">
+        <h1 className="font-serif text-[clamp(1.85rem,6vw,4rem)] font-bold leading-tight mb-4">
+          São José{' '}
+          <span className="text-gold-bright">de Ribamar</span>
         </h1>
-        <p className="font-lora text-[clamp(1rem,2.5vw,1.3rem)] text-white/90 mb-8 max-w-xl mx-auto">
-          Um lugar sagrado de fé, esperança e encontro com Deus.
-          <br />
-          Venha orar, peregrinar e renovar sua vida.
+
+        {/* Separador dourado */}
+        <div className="flex items-center justify-center gap-3 mb-5">
+          <span className="block h-px w-10 bg-gold/60" />
+          <span className="block h-1.5 w-1.5 rounded-full bg-gold" />
+          <span className="block h-px w-10 bg-gold/60" />
+        </div>
+
+        <p className="font-lora text-[clamp(0.95rem,2.5vw,1.2rem)] text-white/85 mb-8 max-w-sm mx-auto leading-relaxed">
+          Um lugar de fé, esperança e encontro com Deus. Venha orar e renovar sua vida.
         </p>
-        <div className="flex flex-col sm:flex-row gap-4 justify-center">
+        <div className="flex flex-col sm:flex-row gap-3 justify-center">
           <Link
             href="#horarios"
-            className="inline-flex items-center gap-2 px-6 py-3 bg-burgundy text-white font-semibold rounded hover:bg-burgundy-dk transition-colors"
+            className="inline-flex items-center justify-center gap-2 px-6 py-3.5 bg-burgundy text-white font-semibold rounded hover:bg-burgundy-dk transition-colors w-full sm:w-auto"
           >
             <Church size={18} />
             Horários das Missas
           </Link>
           <Link
             href="#sobre"
-            className="inline-flex items-center gap-2 px-6 py-3 bg-transparent text-white border-2 border-white font-semibold rounded hover:bg-white hover:text-burgundy transition-colors"
+            className="inline-flex items-center justify-center gap-2 px-6 py-3.5 bg-transparent text-white border-2 border-white/70 font-semibold rounded hover:bg-white hover:text-burgundy transition-colors w-full sm:w-auto"
           >
             Conheça o Santuário
           </Link>

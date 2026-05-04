@@ -8,7 +8,7 @@ export default function Footer() {
   return (
     <footer className="bg-burgundy-dk text-white">
       <div className="py-16">
-        <div className="container-site grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10">
+        <div className="container-site grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-10">
           {/* Brand */}
           <div className="lg:col-span-1">
             <div className="flex items-center gap-3 mb-4">
@@ -56,6 +56,7 @@ export default function Footer() {
                 { label: 'História', href: '/#historia' },
                 { label: 'Devoções', href: '/#devocoes' },
                 { label: 'Administração', href: '/episcopal' },
+                { label: 'Comunidades', href: '/comunidades' },
               ],
             },
             {
@@ -72,6 +73,14 @@ export default function Footer() {
                 { label: 'Grupos e Movimentos', href: '/#pastoral' },
                 { label: 'Notícias', href: '/#noticias' },
                 { label: 'Contato', href: '/#contato' },
+              ],
+            },
+            {
+              title: 'Secretaria',
+              links: [
+                { label: 'Expediente', href: '/secretaria' },
+                { label: 'Atendimento dos padres', href: '/secretaria#atendimento-dos-padres' },
+                { label: 'Atendimento Psicológico', href: '/secretaria#apoio-psicologico' },
               ],
             },
           ].map((col) => (
