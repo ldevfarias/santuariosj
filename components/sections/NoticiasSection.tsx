@@ -11,6 +11,24 @@ interface NoticiasSectionProps {
   noticias: Noticia[]
 }
 
+const canaisReferencia = [
+  {
+    nome: 'Vatican News',
+    url: 'https://www.vaticannews.va/pt.html',
+    logo: '/img/canais/vatican-news.png',
+  },
+  {
+    nome: 'Rádio Educadora',
+    url: 'https://www.radioeducadora.com.br',
+    logo: '/img/canais/radio-educadora.png',
+  },
+  {
+    nome: 'CNBB',
+    url: 'https://www.cnbb.org.br',
+    logo: '/img/canais/cnbb.png',
+  },
+]
+
 export default function NoticiasSection({ noticias }: NoticiasSectionProps) {
   return (
     <section id="noticias" className="py-20 bg-white">
@@ -23,8 +41,7 @@ export default function NoticiasSection({ noticias }: NoticiasSectionProps) {
           {noticias.map((noticia, i) => (
             <article
               key={noticia.id}
-              className={`reveal bg-cream rounded-xl overflow-hidden shadow-md hover:shadow-xl transition-shadow ${noticia.destaque ? 'md:col-span-1 md:row-span-1' : ''
-                }`}
+              className={`reveal bg-cream rounded-xl overflow-hidden shadow-md hover:shadow-xl transition-shadow ${noticia.destaque ? 'md:col-span-1 md:row-span-1' : ''}`}
               style={{ transitionDelay: `${i * 120}ms` }}
             >
               <div className="relative aspect-video overflow-hidden">
@@ -59,6 +76,36 @@ export default function NoticiasSection({ noticias }: NoticiasSectionProps) {
             </article>
           ))}
         </div>
+
+        {/* Faixa de canais de referência */}
+        <div className="mt-10 pt-8 border-t border-cream-dk">
+          <p className="text-center text-xs font-semibold tracking-widest uppercase text-gold mb-6">
+            Canais de referência
+          </p>
+          <ul className="flex flex-wrap justify-center items-center gap-8">
+            {canaisReferencia.map((canal) => (
+              <li key={canal.nome}>
+                <a
+                  href={canal.url}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="flex flex-col items-center gap-2 group"
+                >
+                  <img
+                    src={canal.logo}
+                    alt={canal.nome}
+                    height={32}
+                    className="h-8 w-auto grayscale opacity-70 group-hover:grayscale-0 group-hover:opacity-100 transition-all duration-200"
+                  />
+                  <span className="text-xs text-gold font-body">
+                    {canal.nome} →
+                  </span>
+                </a>
+              </li>
+            ))}
+          </ul>
+        </div>
+
         <div className="text-center mt-10">
           <Link
             href="#"
