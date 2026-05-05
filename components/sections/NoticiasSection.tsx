@@ -94,11 +94,12 @@ export default function NoticiasSection({ noticias }: NoticiasSectionProps) {
                   <img
                     src={canal.logo}
                     alt={canal.nome}
+                    width={120}
                     height={32}
                     className="h-8 w-auto grayscale opacity-70 group-hover:grayscale-0 group-hover:opacity-100 transition-all duration-200"
                   />
                   <span className="text-xs text-gold font-body">
-                    {canal.nome} →
+                    {canal.nome} <span aria-hidden="true">→</span>
                   </span>
                 </a>
               </li>
