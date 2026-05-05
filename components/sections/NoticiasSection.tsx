@@ -16,16 +16,18 @@ const canaisReferencia = [
     nome: 'Vatican News',
     url: 'https://www.vaticannews.va/pt.html',
     logo: '/img/canais/vatican-news.png',
+    destaque: true,
   },
   {
     nome: 'Rádio Educadora',
-    url: 'https://www.radioeducadora.com.br',
-    logo: '/img/canais/radio-educadora.png',
+    url: 'https://educadora560.com.br/',
+    logo: '/img/canais/educadora-fm-catolica.png',
   },
   {
     nome: 'CNBB',
     url: 'https://www.cnbb.org.br',
     logo: '/img/canais/cnbb.png',
+    destaque: true,
   },
 ]
 
@@ -80,7 +82,7 @@ export default function NoticiasSection({ noticias }: NoticiasSectionProps) {
         {/* Faixa de canais de referência */}
         <div className="mt-10 pt-8 border-t border-cream-dk">
           <p className="text-center text-xs font-semibold tracking-widest uppercase text-gold mb-6">
-            Canais de referência
+            Saiba mais
           </p>
           <ul className="flex flex-wrap justify-center items-center gap-8">
             {canaisReferencia.map((canal) => (
@@ -96,7 +98,11 @@ export default function NoticiasSection({ noticias }: NoticiasSectionProps) {
                     alt={canal.nome}
                     width={120}
                     height={32}
-                    className="h-8 w-auto grayscale opacity-70 group-hover:grayscale-0 group-hover:opacity-100 transition-all duration-200"
+                    className={
+                      canal.destaque
+                        ? 'h-10 w-auto rounded-md bg-burgundy px-2 py-1 shadow-sm transition-all duration-200 group-hover:scale-[1.03]'
+                        : 'h-8 w-auto grayscale opacity-70 group-hover:grayscale-0 group-hover:opacity-100 transition-all duration-200'
+                    }
                   />
                   <span className="text-xs text-gold font-body">
                     {canal.nome} <span aria-hidden="true">→</span>
