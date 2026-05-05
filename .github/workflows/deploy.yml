@@ -1,0 +1,51 @@
+name: Deploy
+
+on:
+  workflow_run:
+    workflows: ['CI']
+    types: [completed]
+    branches: [main]
+
+jobs:
+  deploy:
+    name: Deploy to Hostinger VPS
+    runs-on: ubuntu-latest
+
+    if: |
+      github.event.workflow_run.conclusion == 'success' &&
+      github.event.workflow_run.head_branch == 'main'
+
+    steps:
+      - name: Deploy via SSH
+        uses: appleboy/ssh-action@v1.0.3
+        with:
+          host: ${{ secrets.SSH_HOST }}
+          username: ${{ secrets.SSH_USER }}
+          key: ${{ secrets.SSH_PRIVATE_KEY }}
+          port: ${{ secrets.SSH_PORT }}
+          script: |
+            set -e
+
+            cd /var/www/santuario-sj
+
+            # Pull latest code from main
+            git fetch origin
+            git checkout main
+            git pull origin main
+
+            # Install dependencies
+            npm ci
+
+            # Build the Next.js application
+            NEXT_PUBLIC_GOOGLE_ANALYTICS_ID="${{ secrets.NEXT_PUBLIC_GOOGLE_ANALYTICS_ID }}" \
+            RESEND_API_KEY="${{ secrets.RESEND_API_KEY }}" \
+            RESEND_FROM_EMAIL="${{ secrets.RESEND_FROM_EMAIL }}" \
+            RESEND_TO_EMAIL="${{ secrets.RESEND_TO_EMAIL }}" \
+            npm run build
+
+            # Restart the PM2 process
+            pm2 reload santuario-sj --update-env || \
+            pm2 start npm --name "santuario-sj" -- start
+
+            # Save PM2 process list
+            pm2 save
