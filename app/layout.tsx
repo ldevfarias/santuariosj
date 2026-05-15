@@ -2,6 +2,7 @@ import { Cinzel, Lora, Open_Sans } from 'next/font/google'
 
 import type { Metadata } from 'next'
 
+import GoogleAnalytics from '@/components/scripts/GoogleAnalytics'
 import BackToTop from '@/components/interactive/BackToTop'
 import HashScrollFix from '@/components/interactive/HashScrollFix'
 import ScrollReveal from '@/components/interactive/ScrollReveal'
