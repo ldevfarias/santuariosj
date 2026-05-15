@@ -1,3 +1,4 @@
+import type { LucideIcon } from 'lucide-react'
 import * as Icons from 'lucide-react'
 import { ArrowLeft, CalendarDays, CheckCircle2, Phone } from 'lucide-react'
 
@@ -14,9 +15,9 @@ type Props = {
 }
 
 function DynamicIcon({ name, size = 32 }: { name: string; size?: number }) {
-  // eslint-disable-next-line @typescript-eslint/no-explicit-any
-  const Icon = (Icons as any)[name] as React.ComponentType<{ size?: number; className?: string }> | undefined
-  if (!Icon || typeof Icon !== 'function') return null
+  const iconMap = Icons as unknown as Record<string, LucideIcon>
+  const Icon = iconMap[name]
+  if (!Icon || typeof Icon !== 'function') return <Icons.Cross size={size} />
   return <Icon size={size} />
 }
 
