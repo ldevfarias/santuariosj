@@ -1,5 +1,6 @@
 import { Quote } from 'lucide-react'
 
+import Image from 'next/image'
 import Link from 'next/link'
 
 import Ornament from '../ui/Ornament'
@@ -10,8 +11,15 @@ export default function SaoJoseSection() {
       id="sao-jose"
       className="relative py-16 bg-burgundy-dk overflow-hidden"
     >
-      <div className="absolute inset-0 bg-[url('/img/foto_2.jpeg')] bg-cover bg-position-[center_30%] opacity-10" />
-      <div className="reveal relative z-[1] container-site">
+      <Image
+        src="/img/foto_2.avif"
+        alt=""
+        fill
+        aria-hidden="true"
+        className="absolute inset-0 object-cover object-[center_30%] opacity-10"
+        sizes="100vw"
+      />
+      <div className="reveal relative z-1 container-site">
         <div className="grid gap-8 lg:grid-cols-2 lg:items-center lg:gap-14">
 
           {/* Apresentação */}

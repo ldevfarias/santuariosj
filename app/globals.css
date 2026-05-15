@@ -100,6 +100,43 @@
 .hero-content > *:nth-child(2) { animation-delay: 0.42s; }
 .hero-content > *:nth-child(3) { animation-delay: 0.62s; }
 
+@keyframes heroCrossfadeA {
+  0%, 45% { opacity: 1; }
+  50%, 95% { opacity: 0; }
+  100% { opacity: 1; }
+}
+
+@keyframes heroCrossfadeB {
+  0%, 45% { opacity: 0; }
+  50%, 95% { opacity: 1; }
+  100% { opacity: 0; }
+}
+
+.hero-slide {
+  will-change: opacity;
+}
+
+.hero-slide-a {
+  opacity: 1;
+  animation: heroCrossfadeA 11s ease-in-out infinite;
+}
+
+.hero-slide-b {
+  opacity: 0;
+  animation: heroCrossfadeB 11s ease-in-out infinite;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .hero-slide-a,
+  .hero-slide-b {
+    animation: none;
+  }
+
+  .hero-slide-b {
+    opacity: 0;
+  }
+}
+
 /* ── Reveal — easing suave ─────────────────────────────────────────── */
 .reveal,
 .reveal-left,

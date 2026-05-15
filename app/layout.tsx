@@ -2,37 +2,38 @@ import { Cinzel, Lora, Open_Sans } from 'next/font/google'
 
 import type { Metadata } from 'next'
 
-import GoogleAnalytics from '@/components/scripts/GoogleAnalytics'
 import BackToTop from '@/components/interactive/BackToTop'
 import HashScrollFix from '@/components/interactive/HashScrollFix'
-import ProgressBar from '@/components/interactive/ProgressBar'
 import ScrollReveal from '@/components/interactive/ScrollReveal'
 import Footer from '@/components/layout/Footer'
 import Header from '@/components/layout/Header'
 import Topbar from '@/components/layout/Topbar'
+import GoogleAnalytics from '@/components/scripts/GoogleAnalytics'
 
 import './globals.css'
 
 const cinzel = Cinzel({
   subsets: ['latin'],
-  weight: ['400', '600', '700', '900'],
+  weight: ['400', '700'],
   variable: '--font-cinzel',
   display: 'swap',
 })
 
 const lora = Lora({
   subsets: ['latin'],
-  weight: ['400', '500', '600'],
-  style: ['normal', 'italic'],
+  weight: ['400', '600'],
+  style: ['normal'],
   variable: '--font-lora-var',
   display: 'swap',
+  preload: false,
 })
 
 const openSans = Open_Sans({
   subsets: ['latin'],
-  weight: ['300', '400', '500', '600'],
+  weight: ['400', '600'],
   variable: '--font-open-sans',
   display: 'swap',
+  preload: false,
 })
 
 export const metadata: Metadata = {
@@ -108,7 +109,6 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         <GoogleAnalytics />
       </head>
       <body>
-        <ProgressBar />
         <Topbar />
         <Header />
         <main>{children}</main>
