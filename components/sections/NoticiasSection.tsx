@@ -93,7 +93,7 @@ export default function NoticiasSection({ noticias }: NoticiasSectionProps) {
                   rel="noopener noreferrer"
                   className="flex flex-col items-center gap-2 group"
                 >
-                  <img
+                  <Image
                     src={canal.logo}
                     alt={canal.nome}
                     width={120}
