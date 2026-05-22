@@ -2,6 +2,7 @@ import { Cinzel, Lora, Open_Sans } from 'next/font/google'
 
 import type { Metadata } from 'next'
 
+import { IMAGENS_SANTO } from '@/data/bencaos'
 import BackToTop from '@/components/interactive/BackToTop'
 import BencaoModalWrapper from '@/components/interactive/BencaoModalWrapper'
 import HashScrollFix from '@/components/interactive/HashScrollFix'
@@ -98,12 +99,17 @@ const jsonLd = {
 }
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
+  const imagemBencao = IMAGENS_SANTO[new Date().getDay()] ?? IMAGENS_SANTO[0]
+
   return (
     <html
       lang="pt-BR"
       className={`${cinzel.variable} ${lora.variable} ${openSans.variable}`}
     >
       <head>
+        {imagemBencao && (
+          <link rel="preload" as="image" href={imagemBencao} />
+        )}
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
