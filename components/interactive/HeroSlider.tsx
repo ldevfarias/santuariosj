@@ -1,4 +1,4 @@
- 'use client'
+'use client'
 
 import { useEffect, useRef, useState } from 'react'
 
@@ -73,9 +73,8 @@ export default function HeroSlider() {
               // Active slide sits on top; previous stays beneath until fade completes
               zIndex: isActive ? 1 : 0,
             }}
-            className={`absolute inset-0 transition-opacity will-change-[opacity] ${
-              isActive ? 'opacity-100' : 'opacity-0'
-            }`}
+            className={`absolute inset-0 transition-opacity will-change-[opacity] ${isActive ? 'opacity-100' : 'opacity-0'
+              }`}
             aria-hidden={!isActive}
           >
             <Image
