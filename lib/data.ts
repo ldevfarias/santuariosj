@@ -48,11 +48,13 @@ export function getDevocoes(): { lista: string[]; cards: DevoItem[] } {
 }
 
 export function getDevocoesPages(): DevocaoPage[] {
-  return readJson<DevocaoPage[]>('devocoes-pages.json')
+  return readJson<DevocaoPage[]>('devocoes-pages.json').filter(
+    (p) => p.slug !== 'ex-voto-museum',
+  )
 }
 
 export function getDevocaoPage(slug: string): DevocaoPage | undefined {
-  return getDevocoesPages().find((item) => item.slug === slug)
+  return readJson<DevocaoPage[]>('devocoes-pages.json').find((item) => item.slug === slug)
 }
 
 export function getDevocaoGalleryImages(slug: string): string[] {

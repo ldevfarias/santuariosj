@@ -24,6 +24,11 @@ const canaisReferencia = [
     logo: '/img/canais/educadora-fm-catolica.png',
   },
   {
+    nome: 'Arquidiocese de São Luís',
+    url: 'https://arquislz.org.br/',
+    logo: '/img/arquidiocese.png',
+  },
+  {
     nome: 'CNBB',
     url: 'https://www.cnbb.org.br',
     logo: '/img/canais/cnbb.png',
