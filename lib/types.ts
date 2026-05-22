@@ -8,6 +8,8 @@ export type Missa = {
   destaque?: boolean
   icone: string
   horarios: Horario[]
+  programacaoSemanal?: string[]
+  observacao?: string
 }
 
 export type AgendaItem = {

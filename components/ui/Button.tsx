@@ -1,4 +1,5 @@
 import Link from 'next/link'
+import { forwardRef } from 'react'
 
 type Variant = 'primary' | 'outline' | 'gold'
 
@@ -10,6 +11,7 @@ interface ButtonProps {
   className?: string
   type?: 'button' | 'submit' | 'reset'
   disabled?: boolean
+  onClick?: () => void
 }
 
 const variants: Record<Variant, string> = {
@@ -21,15 +23,10 @@ const variants: Record<Variant, string> = {
     'bg-gold text-white border-2 border-gold hover:bg-gold-light hover:border-gold-light',
 }
 
-export default function Button({
-  href,
-  variant = 'primary',
-  full = false,
-  children,
-  className = '',
-  type = 'button',
-  disabled = false,
-}: ButtonProps) {
+const Button = forwardRef<HTMLButtonElement, ButtonProps>(function Button(
+  { href, variant = 'primary', full = false, children, className = '', type = 'button', disabled = false, onClick },
+  ref
+) {
   const base =
     'inline-flex items-center gap-2 px-6 py-3 rounded font-body font-semibold text-sm tracking-wide transition-all duration-300 active:scale-[0.97]'
   const classes = `${base} ${variants[variant]} ${full ? 'w-full justify-center' : ''} ${className}`
@@ -43,8 +40,10 @@ export default function Button({
   }
 
   return (
-    <button type={type} disabled={disabled} className={classes}>
+    <button ref={ref} type={type} disabled={disabled} onClick={onClick} className={classes}>
       {children}
     </button>
   )
-}
+})
+
+export default Button

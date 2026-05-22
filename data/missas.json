@@ -3,17 +3,24 @@
     "dia": "Segunda a Sexta",
     "icone": "Sun",
     "horarios": [
-      { "hora": "15h00", "desc": "1ª Missa" },
-      { "hora": "17h00", "desc": "2ª Missa" }
+      { "hora": "15h00", "desc": "Missa" },
+      { "hora": "17h00", "desc": "Missa" }
+    ],
+    "programacaoSemanal": [
+      "Segunda-feira: 15h (Novena de Nossa Senhora das Graças); 17h (Missa)",
+      "Terça-feira: 15h (Missa da Saúde); 17h (Missa)",
+      "Quarta-feira: 15h (Novena de São José); 17h (Missa)",
+      "Quinta-feira: 15h (Oração da Catena da Legião de Maria e oração pelas vocações); 17h (Missa)",
+      "Sexta-feira: 15h (Consagração ao Sagrado Coração de Jesus); 17h (Renovação Carismática, grupo Boa Nova)"
     ]
   },
   {
     "dia": "Sábado",
     "icone": "Star",
     "horarios": [
-      { "hora": "10h00", "desc": "1ª Missa" },
-      { "hora": "15h00", "desc": "2ª Missa" },
-      { "hora": "17h00", "desc": "3ª Missa" }
+      { "hora": "10h00", "desc": "Batizados" },
+      { "hora": "15h00", "desc": "Missa das crianças" },
+      { "hora": "17h00", "desc": "Missa" }
     ]
   },
   {
@@ -21,12 +28,13 @@
     "destaque": true,
     "icone": "Church",
     "horarios": [
-      { "hora": "06h00", "desc": "1ª Missa" },
-      { "hora": "08h30", "desc": "2ª Missa" },
+      { "hora": "06h00", "desc": "Missa" },
+      { "hora": "08h30", "desc": "Missa" },
       { "hora": "10h00", "desc": "Batizados" },
-      { "hora": "15h00", "desc": "3ª Missa" },
-      { "hora": "17h00", "desc": "4ª Missa" },
-      { "hora": "18h30", "desc": "5ª Missa" }
-    ]
+      { "hora": "15h00", "desc": "Missa" },
+      { "hora": "17h00", "desc": "Missa" },
+      { "hora": "18h30", "desc": "Missa" }
+    ],
+    "observacao": "Temos a benção de veículos após a missa."
   }
 ]

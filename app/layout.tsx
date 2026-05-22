@@ -3,7 +3,9 @@ import { Cinzel, Lora, Open_Sans } from 'next/font/google'
 import type { Metadata } from 'next'
 
 import BackToTop from '@/components/interactive/BackToTop'
+import BencaoModalWrapper from '@/components/interactive/BencaoModalWrapper'
 import HashScrollFix from '@/components/interactive/HashScrollFix'
+import PixWidget from '@/components/interactive/PixWidget'
 import ScrollReveal from '@/components/interactive/ScrollReveal'
 import Footer from '@/components/layout/Footer'
 import Header from '@/components/layout/Header'
@@ -114,8 +116,10 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         <main>{children}</main>
         <Footer />
         <BackToTop />
+        <PixWidget />
         <ScrollReveal />
         <HashScrollFix />
+        <BencaoModalWrapper />
       </body>
     </html>
   )
