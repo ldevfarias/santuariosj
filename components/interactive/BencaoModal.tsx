@@ -3,8 +3,8 @@
 import Image from 'next/image'
 import { useEffect, useRef, useState } from 'react'
 
-import { BENCAOS, IMAGENS_SANTO, getDayOfYear } from '@/data/bencaos'
 import Button from '@/components/ui/Button'
+import { BENCAOS, IMAGENS_SANTO, getDayOfYear } from '@/data/bencaos'
 
 type ModalState = {
   imagem: string
@@ -12,24 +12,22 @@ type ModalState = {
   autor?: string
 }
 
+function getModalInicial(): ModalState {
+  const hoje = new Date()
+  const diaSemana = hoje.getDay()
+  const diaAno = getDayOfYear(hoje)
+  const bencao = BENCAOS[diaAno % BENCAOS.length]
+  return {
+    imagem: IMAGENS_SANTO[diaSemana] ?? IMAGENS_SANTO[0] ?? '',
+    texto: bencao?.texto ?? '',
+    autor: bencao?.autor,
+  }
+}
+
 export default function BencaoModal() {
-  const [aberto, setAberto] = useState(false)
-  const [modal, setModal] = useState<ModalState | null>(null)
+  const [aberto, setAberto] = useState(true)
+  const [modal] = useState<ModalState>(getModalInicial)
   const btnRef = useRef<HTMLButtonElement>(null)
-
-  useEffect(() => {
-    const hoje = new Date()
-    const diaSemana = hoje.getDay()
-    const diaAno = getDayOfYear(hoje)
-    const bencao = BENCAOS[diaAno % BENCAOS.length]
-
-    setModal({
-      imagem: IMAGENS_SANTO[diaSemana] ?? IMAGENS_SANTO[0] ?? '',
-      texto: bencao?.texto ?? '',
-      autor: bencao?.autor,
-    })
-    setAberto(true)
-  }, [])
 
   useEffect(() => {
     if (aberto) {

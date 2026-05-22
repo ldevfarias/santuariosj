@@ -1,6 +1,5 @@
-import QRCode from 'qrcode'
-import { writeFileSync } from 'fs'
 import { join } from 'path'
+import QRCode from 'qrcode'
 
 function crc16(payload: string): string {
   let crc = 0xffff
