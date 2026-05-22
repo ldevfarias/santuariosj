@@ -51,7 +51,6 @@ export default function BencaoModal() {
   return (
     <div
       className="fixed inset-0 z-9999 flex items-center justify-center p-4 bg-black/60 backdrop-blur-sm"
-      aria-hidden="true"
       onClick={() => setAberto(false)}
     >
       <div
@@ -79,7 +78,7 @@ export default function BencaoModal() {
             id="bencao-titulo"
             className="font-serif text-gold text-lg tracking-widest uppercase mb-4"
           >
-            ✝ Bênção do Dia
+            <span aria-hidden="true">✝ </span>Bênção do Dia
           </p>
 
           <blockquote className="font-lora italic text-burgundy-dk text-base leading-relaxed mb-2">
