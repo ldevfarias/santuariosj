@@ -21,13 +21,13 @@ function DynamicIcon({ name, size = 32 }: { name: string; size?: number }) {
 }
 
 export async function generateStaticParams() {
-  const sacramentos = getSacramentos()
+  const sacramentos = await getSacramentos()
   return sacramentos.map((s) => ({ slug: s.slug }))
 }
 
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const { slug } = await params
-  const sacramento = getSacramento(slug)
+  const sacramento = await getSacramento(slug)
   if (!sacramento) return {}
   return {
     title: sacramento.nome,
@@ -37,7 +37,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
 
 export default async function SacramentoPage({ params }: Props) {
   const { slug } = await params
-  const sacramento = getSacramento(slug)
+  const sacramento = await getSacramento(slug)
   if (!sacramento) notFound()
   const descricaoHeroClass = sacramento.descricaoItalico
     ? 'font-lora text-gold-bright/80 text-sm mt-0.5 leading-relaxed max-w-xl italic'

@@ -22,8 +22,8 @@ function DynamicIcon({ name, size = 24 }: { name: string; size?: number }) {
   return <Icon size={size} />
 }
 
-export default function SacramentosPage() {
-  const sacramentos = getSacramentos()
+export default async function SacramentosPage() {
+  const sacramentos = await getSacramentos()
 
   return (
     <main className="bg-cream min-h-screen">

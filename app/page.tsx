@@ -33,12 +33,12 @@ export const metadata: Metadata = {
   alternates: { canonical: 'https://santuariosjoser.org.br' },
 }
 
-export default function HomePage() {
-  const missas = getMissas()
-  const agenda = getAgenda()
-  const noticias = getNoticias()
-  const sacramentos = getSacramentos()
-  const grupos = getGrupos()
+export default async function HomePage() {
+  const missas = await getMissas()
+  const agenda = await getAgenda()
+  const noticias = await getNoticias()
+  const sacramentos = await getSacramentos()
+  const grupos = await getGrupos()
 
   return (
     <>

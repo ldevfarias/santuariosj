@@ -12,8 +12,8 @@ export const metadata: Metadata = {
   description: 'Conheça o bispo e os padres que pastoreiam o Santuário de São José de Ribamar.',
 }
 
-export default function EpiscopalPage() {
-  const sacerdotes = getSacerdotes()
+export default async function EpiscopalPage() {
+  const sacerdotes = await getSacerdotes()
   const bispo = sacerdotes.find((s) => s.bispo)
   const padres = sacerdotes.filter((s) => !s.bispo)
   const diaconos: Sacerdote[] = [
