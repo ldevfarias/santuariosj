@@ -1,4 +1,4 @@
-import mysql from 'mysql2/promise'
+import mysql, { type ExecuteValues } from 'mysql2/promise'
 
 const pool = mysql.createPool({
   host: process.env.DB_HOST ?? '127.0.0.1',
@@ -12,7 +12,7 @@ const pool = mysql.createPool({
 
 export async function query<T>(sql: string, params?: unknown[]): Promise<T[]> {
   try {
-    const [rows] = await pool.execute(sql, params as any)
+    const [rows] = await pool.execute(sql, params as ExecuteValues)
     return rows as T[]
   } catch (err) {
     console.error('[db] query failed:', sql, err)
