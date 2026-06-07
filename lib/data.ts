@@ -21,6 +21,15 @@ function readJson<T>(filename: string): T {
   return JSON.parse(readFileSync(filepath, 'utf-8')) as T
 }
 
+function parseJsonField<T>(raw: string | null | undefined, fallback: T): T {
+  if (!raw) return fallback
+  try {
+    return JSON.parse(raw) as T
+  } catch {
+    return fallback
+  }
+}
+
 // ── missas ───────────────────────────────────────────────────────────────────
 
 type MissaRow = {
@@ -35,7 +44,7 @@ export const getMissas = unstable_cache(
       dia: r.dia,
       destaque: Boolean(r.destaque),
       icone: r.icone,
-      horarios: JSON.parse(r.horarios) as Missa['horarios'],
+      horarios: parseJsonField(r.horarios, [] as Missa['horarios']),
     }))
   },
   ['missas'],
@@ -108,9 +117,9 @@ export const getSacramentos = unstable_cache(
       descricao: r.descricao,
       descricaoItalico: Boolean(r.descricao_italico),
       descricaoLonga: r.descricao_longa,
-      requisitos: JSON.parse(r.requisitos) as string[],
+      requisitos: parseJsonField(r.requisitos, [] as string[]),
       agendamento: r.agendamento,
-      agendamentoItens: r.agendamento_itens ? (JSON.parse(r.agendamento_itens) as string[]) : undefined,
+      agendamentoItens: parseJsonField(r.agendamento_itens, undefined as string[] | undefined),
       agendamentoContato: r.agendamento_contato ?? undefined,
       cta: r.cta ?? undefined,
       href: r.href,

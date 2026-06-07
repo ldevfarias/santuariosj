@@ -20,8 +20,6 @@ import {
   getSacramentos,
 } from '@/lib/data'
 
-export const dynamic = 'force-static'
-
 export const metadata: Metadata = {
   title: 'Início',
   openGraph: {
