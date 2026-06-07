@@ -18,11 +18,6 @@ const pool =
   }))
 
 export async function query<T>(sql: string, params?: unknown[]): Promise<T[]> {
-  try {
-    const [rows] = await pool.execute(sql, params as ExecuteValues)
-    return rows as T[]
-  } catch (err) {
-    console.error('[db] query failed:', sql, err)
-    return []
-  }
+  const [rows] = await pool.execute(sql, params as ExecuteValues)
+  return rows as T[]
 }

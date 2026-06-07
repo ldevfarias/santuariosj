@@ -5,7 +5,7 @@ import type { Metadata } from 'next'
 import Link from 'next/link'
 import { notFound } from 'next/navigation'
 
-import { getSacramento, getSacramentos } from '@/lib/data'
+import { getSacramento } from '@/lib/data'
 
 import Ornament from '@/components/ui/Ornament'
 
@@ -20,10 +20,7 @@ function DynamicIcon({ name, size = 32 }: { name: string; size?: number }) {
   return <Icon size={size} />
 }
 
-export async function generateStaticParams() {
-  const sacramentos = await getSacramentos()
-  return sacramentos.map((s) => ({ slug: s.slug }))
-}
+export const dynamicParams = true
 
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const { slug } = await params
