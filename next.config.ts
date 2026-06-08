@@ -1,5 +1,3 @@
-import path from 'path'
-
 import type { NextConfig } from 'next'
 
 const isDev = process.env.NODE_ENV === 'development'
@@ -27,7 +25,7 @@ const securityHeaders = [
       "default-src 'self'",
       `script-src 'self' 'unsafe-inline'${isDev ? " 'unsafe-eval'" : ''}`,
       "style-src 'self' 'unsafe-inline' https://fonts.googleapis.com",
-      "img-src 'self' images.unsplash.com https://placehold.co data: blob:",
+      "img-src 'self' images.unsplash.com https://placehold.co https://*.r2.dev data: blob:",
       "font-src 'self' https://fonts.gstatic.com",
       "frame-src https://www.google.com/maps/",
       "connect-src 'self'",
@@ -48,6 +46,11 @@ const nextConfig: NextConfig = {
         hostname: 'placehold.co',
         pathname: '/**',
       },
+      {
+        protocol: 'https',
+        hostname: '*.r2.dev',
+        pathname: '/**',
+      },
     ],
   },
   async headers() {
@@ -58,9 +61,7 @@ const nextConfig: NextConfig = {
       },
     ]
   },
-  turbopack: {
-    root: path.resolve(__dirname),
-  },
+
 }
 
 export default nextConfig
