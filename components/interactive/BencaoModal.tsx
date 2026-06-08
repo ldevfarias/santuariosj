@@ -2,15 +2,7 @@
 
 import Image from 'next/image'
 import { useState } from 'react'
-
-type BencaoDiaRow = {
-  id: number
-  ordem: number
-  dia: string
-  mensagem: string
-  autor: string
-  imagem: string
-}
+import type { BencaoDiaRow } from '@/lib/data'
 
 export default function BencaoModal({ bencaos }: { bencaos: BencaoDiaRow[] }) {
   const [open, setOpen] = useState(true)

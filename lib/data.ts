@@ -3,6 +3,11 @@ import { join } from 'path'
 import { unstable_cache } from 'next/cache'
 
 import { query } from './db'
+
+function dbCache<T>(fn: () => Promise<T>, keys: string[], opts: { revalidate: number; tags: string[] }): () => Promise<T> {
+  if (process.env.NODE_ENV === 'development') return fn
+  return unstable_cache(fn, keys, opts)
+}
 import type {
   AgendaItem,
   Comunidade,
@@ -37,7 +42,7 @@ type MissaRow = {
   horarios: string; programacao_semanal: string | null; observacao: string | null
 }
 
-export const getMissas = unstable_cache(
+export const getMissas = dbCache(
   async (): Promise<Missa[]> => {
     const rows = await query<MissaRow>('SELECT * FROM missas ORDER BY ordem ASC')
     return rows.map((r) => ({
@@ -45,6 +50,8 @@ export const getMissas = unstable_cache(
       destaque: Boolean(r.destaque),
       icone: r.icone,
       horarios: parseJsonField(r.horarios, [] as Missa['horarios']),
+      programacaoSemanal: parseJsonField(r.programacao_semanal, undefined as string[] | undefined),
+      observacao: r.observacao ?? undefined,
     }))
   },
   ['missas'],
@@ -58,7 +65,7 @@ type AgendaRow = {
   titulo: string; hora: string; local: string; tipo: string
 }
 
-export const getAgenda = unstable_cache(
+export const getAgenda = dbCache(
   async (): Promise<AgendaItem[]> => {
     const rows = await query<AgendaRow>('SELECT * FROM agenda ORDER BY ordem ASC')
     return rows.map((r) => ({
@@ -81,7 +88,7 @@ type NoticiaRow = {
   data: string; conteudo: string; imagem: string; destaque: number
 }
 
-export const getNoticias = unstable_cache(
+export const getNoticias = dbCache(
   async (): Promise<Noticia[]> => {
     const rows = await query<NoticiaRow>('SELECT * FROM noticias ORDER BY ordem ASC')
     return rows.map((r) => ({
@@ -107,7 +114,7 @@ type SacramentoRow = {
   agendamento_contato: string | null; cta: string | null; href: string; icone: string
 }
 
-export const getSacramentos = unstable_cache(
+export const getSacramentos = dbCache(
   async (): Promise<Sacramento[]> => {
     const rows = await query<SacramentoRow>('SELECT * FROM sacramentos ORDER BY ordem ASC')
     return rows.map((r) => ({
@@ -142,7 +149,7 @@ type GrupoRow = {
   icone: string; encontro: string | null
 }
 
-export const getGrupos = unstable_cache(
+export const getGrupos = dbCache(
   async (): Promise<Grupo[]> => {
     const rows = await query<GrupoRow>('SELECT * FROM grupos ORDER BY ordem ASC')
     return rows.map((r) => ({
@@ -163,7 +170,7 @@ type EpiscopalRow = {
   cargo: string; biografia: string; foto: string
 }
 
-export const getSacerdotes = unstable_cache(
+export const getSacerdotes = dbCache(
   async (): Promise<Sacerdote[]> => {
     const rows = await query<EpiscopalRow>('SELECT * FROM episcopal ORDER BY ordem ASC')
     return rows.map((r) => ({
@@ -182,11 +189,11 @@ export const getSacerdotes = unstable_cache(
 
 // ── bencao_dia ───────────────────────────────────────────────────────────────
 
-type BencaoDiaRow = {
+export type BencaoDiaRow = {
   id: number; ordem: number; dia: string; mensagem: string; autor: string; imagem: string
 }
 
-export const getBencaoDia = unstable_cache(
+export const getBencaoDia = dbCache(
   async (): Promise<BencaoDiaRow[]> => {
     return query<BencaoDiaRow>('SELECT * FROM bencao_dia ORDER BY ordem ASC')
   },
@@ -206,6 +213,48 @@ export async function getDevocoes(): Promise<{ lista: string[]; cards: DevoItem[
   ]
   return { lista: rows.map((r) => r.mensagem), cards }
 }
+
+// ── hero slides ──────────────────────────────────────────────────────────────
+
+type HeroSlideRow = {
+  id: number; ordem: number; imagem: string; alt: string; position: string | null
+}
+
+const FALLBACK_SLIDES = [
+  { src: '/img/sagrada_familia.avif', alt: 'Sagrada Família — Santuário de São José de Ribamar', position: 'object-center' },
+  { src: '/img/foto_3.jpeg', alt: 'Igreja do Santuário', position: 'object-[center_20%]' },
+]
+
+export const getHeroSlides = dbCache(
+  async () => {
+    const rows = await query<HeroSlideRow>('SELECT * FROM hero_slides ORDER BY ordem ASC')
+    if (rows.length === 0) return FALLBACK_SLIDES
+    return rows.map((r) => ({
+      src: r.imagem,
+      alt: r.alt,
+      position: r.position ?? 'object-center',
+    }))
+  },
+  ['hero_slides'],
+  { revalidate: 3600, tags: ['hero_slides'] }
+)
+
+// ── hero ─────────────────────────────────────────────────────────────────────
+
+type HeroRow = {
+  id: number; titulo: string; titulo_destaque: string; subtitulo: string
+}
+
+export const getHero = dbCache(
+  async () => {
+    const rows = await query<HeroRow>('SELECT * FROM hero LIMIT 1')
+    const r = rows[0]
+    if (!r) return { titulo: '', tituloDestaque: '', subtitulo: '' }
+    return { titulo: r.titulo, tituloDestaque: r.titulo_destaque, subtitulo: r.subtitulo }
+  },
+  ['hero'],
+  { revalidate: 3600, tags: ['hero'] }
+)
 
 // ── mantidos como JSON (sem tabela no schema) ────────────────────────────────
 
