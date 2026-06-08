@@ -14,8 +14,8 @@ export const metadata: Metadata = {
     'Conheca as comunidades vinculadas ao Santuário de São Jose de Ribamar, com seus bairros, horarios de celebracao e localizacao.',
 }
 
-export default function ComunidadesPage() {
-  const comunidades = getComunidades()
+export default async function ComunidadesPage() {
+  const comunidades = await getComunidades()
 
   return (
     <main className="min-h-screen bg-cream">
@@ -48,7 +48,7 @@ export default function ComunidadesPage() {
             Comunidades do Santuário
           </h2>
           <p className="mx-auto mt-2 max-w-3xl font-lora text-base text-text-soft sm:text-lg">
-            Cada comunidade apresenta seu bairro, horário de celebração e acesso rápido ao mapa.
+            Cada comunidade apresenta seu endereço, horário de celebração e acesso rápido ao mapa.
           </p>
         </div>
 
@@ -59,29 +59,15 @@ export default function ComunidadesPage() {
               className="reveal overflow-hidden rounded-[1.75rem] border border-cream-dk bg-white shadow-sm transition-all duration-300 hover:-translate-y-1 hover:shadow-lg"
               style={{ transitionDelay: `${index * 100}ms` }}
             >
-              <div className="border-b border-cream-dk bg-linear-to-br from-white via-cream to-cream-dk/60 p-5">
-                <div className="relative pb-24 sm:pb-28">
-                  <div className="relative ml-auto aspect-16/10 w-[88%] overflow-hidden rounded-3xl border border-cream-dk bg-cream-dk shadow-md">
-                    <Image
-                      src={comunidade.imagemPrincipal}
-                      alt={comunidade.imagemPrincipalAlt}
-                      fill
-                      className="object-cover"
-                      sizes="(max-width: 768px) 100vw, 42vw"
-                      priority={index < 2}
-                    />
-                  </div>
-
-                  <div className="absolute -bottom-1 left-0 aspect-4/5 w-[42%] overflow-hidden rounded-[1.25rem] border-4 border-white bg-cream shadow-md">
-                    <Image
-                      src={comunidade.imagemSecundaria}
-                      alt={comunidade.imagemSecundariaAlt}
-                      fill
-                      className="object-cover"
-                      sizes="(max-width: 768px) 42vw, 18vw"
-                    />
-                  </div>
-                </div>
+              <div className="relative aspect-16/9 w-full overflow-hidden">
+                <Image
+                  src={comunidade.imagem}
+                  alt={comunidade.nome}
+                  fill
+                  className="object-cover"
+                  sizes="(max-width: 768px) 100vw, 42vw"
+                  priority={index < 2}
+                />
               </div>
 
               <div className="p-6 sm:p-7">
@@ -97,14 +83,14 @@ export default function ComunidadesPage() {
                   <p className="flex items-start gap-3 leading-relaxed">
                     <MapPin size={18} className="mt-0.5 shrink-0 text-gold" />
                     <span>
-                      <strong className="font-semibold text-text">Bairro:</strong> {comunidade.bairro}
+                      <strong className="font-semibold text-text">Endereço:</strong> {comunidade.endereco}
                     </span>
                   </p>
                   <p className="flex items-start gap-3 leading-relaxed">
                     <Clock3 size={18} className="mt-0.5 shrink-0 text-gold" />
                     <span>
-                      <strong className="font-semibold text-text">Celebracoes:</strong>{' '}
-                      {comunidade.celebracao}
+                      <strong className="font-semibold text-text">Celebrações:</strong>{' '}
+                      {comunidade.celebracoes}
                     </span>
                   </p>
                 </div>
