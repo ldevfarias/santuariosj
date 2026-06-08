@@ -256,11 +256,30 @@ export const getHero = dbCache(
   { revalidate: 3600, tags: ['hero'] }
 )
 
-// ── mantidos como JSON (sem tabela no schema) ────────────────────────────────
+// ── comunidades ──────────────────────────────────────────────────────────────
 
-export function getComunidades(): Comunidade[] {
-  return readJson<Comunidade[]>('comunidades.json')
+type ComunidadeRow = {
+  id: number; ordem: number; nome: string; endereco: string
+  celebracoes: string; mapa_url: string; imagem: string
 }
+
+export const getComunidades = dbCache(
+  async (): Promise<Comunidade[]> => {
+    const rows = await query<ComunidadeRow>('SELECT * FROM comunidades ORDER BY ordem ASC')
+    return rows.map((r) => ({
+      id: r.id,
+      nome: r.nome,
+      endereco: r.endereco,
+      celebracoes: r.celebracoes,
+      mapaUrl: r.mapa_url,
+      imagem: r.imagem,
+    }))
+  },
+  ['comunidades'],
+  { revalidate: 1800, tags: ['comunidades'] }
+)
+
+// ── mantidos como JSON (sem tabela no schema) ────────────────────────────────
 
 export function getDevocoesPages(): DevocaoPage[] {
   return readJson<DevocaoPage[]>('devocoes-pages.json')
