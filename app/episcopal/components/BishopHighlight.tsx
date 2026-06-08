@@ -4,6 +4,13 @@ import type { Sacerdote } from '@/lib/types'
 
 import Ornament from '@/components/ui/Ornament'
 
+const CARGO_LABEL: Record<string, string> = {
+  bispo: 'Bispo',
+  reitor: 'Reitor',
+  paroco_solidario: 'Pároco Solidário',
+  diacono: 'Diácono Permanente',
+}
+
 type BishopHighlightProps = {
   bispo: Sacerdote
 }
@@ -36,7 +43,7 @@ export default function BishopHighlight({ bispo }: BishopHighlightProps) {
           </div>
           <div className="flex flex-col gap-3 md:gap-4">
             <span className="inline-block self-start px-4 py-1 text-xs font-body font-semibold uppercase tracking-widest text-gold border border-gold rounded-full">
-              {bispo.cargo}
+              {CARGO_LABEL[bispo.cargo] ?? bispo.cargo}
             </span>
             <h2 className="font-serif text-[clamp(1.8rem,4vw,3rem)] font-bold text-white leading-tight">
               {bispo.titulo} {bispo.nome}
