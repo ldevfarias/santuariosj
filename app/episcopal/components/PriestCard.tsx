@@ -2,6 +2,13 @@ import Image from 'next/image'
 
 import type { Sacerdote } from '@/lib/types'
 
+const CARGO_LABEL: Record<string, string> = {
+  bispo: 'Bispo',
+  reitor: 'Reitor',
+  paroco_solidario: 'Pároco Solidário',
+  diacono: 'Diácono Permanente',
+}
+
 function getExcerpt(text: string, max = 280) {
   if (text.length <= max) return text
   const clipped = text.slice(0, max)
@@ -28,7 +35,7 @@ export default function PriestCard({ padre }: PriestCardProps) {
       </div>
       <div className="p-6">
         <span className="inline-block px-3 py-0.5 text-xs font-body font-semibold uppercase tracking-wider text-white bg-burgundy rounded mb-3">
-          {padre.cargo}
+          {CARGO_LABEL[padre.cargo] ?? padre.cargo}
         </span>
         <h3 className="font-serif text-xl font-bold text-text mb-2">
           {padre.titulo} {padre.nome}
