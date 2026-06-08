@@ -29,8 +29,9 @@ export default function SacramentosSection({ sacramentos }: SacramentosSectionPr
         />
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5">
           {sacramentos.map((s, i) => (
-            <div
-              key={s.id}
+            <Link
+              key={s.slug}
+              href={s.href}
               className="reveal bg-white rounded-xl p-6 text-center shadow-sm hover:shadow-md hover:-translate-y-1 transition-all flex flex-col"
               style={{ transitionDelay: `${i * 90}ms` }}
             >
@@ -57,7 +58,7 @@ export default function SacramentosSection({ sacramentos }: SacramentosSectionPr
                   </Link>
                 )}
               </div>
-            </div>
+            </Link>
           ))}
         </div>
       </div>
