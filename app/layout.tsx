@@ -3,12 +3,15 @@ import { Cinzel, Lora, Open_Sans } from 'next/font/google'
 import type { Metadata } from 'next'
 
 import BackToTop from '@/components/interactive/BackToTop'
+import BencaoModal from '@/components/interactive/BencaoModal'
 import HashScrollFix from '@/components/interactive/HashScrollFix'
 import ProgressBar from '@/components/interactive/ProgressBar'
 import ScrollReveal from '@/components/interactive/ScrollReveal'
 import Footer from '@/components/layout/Footer'
 import Header from '@/components/layout/Header'
 import Topbar from '@/components/layout/Topbar'
+
+import { getBencaoDia } from '@/lib/data'
 
 import './globals.css'
 
@@ -93,7 +96,9 @@ const jsonLd = {
   ],
 }
 
-export default function RootLayout({ children }: { children: React.ReactNode }) {
+export default async function RootLayout({ children }: { children: React.ReactNode }) {
+  const bencaos = await getBencaoDia()
+
   return (
     <html
       lang="pt-BR"
@@ -114,6 +119,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         <BackToTop />
         <ScrollReveal />
         <HashScrollFix />
+        <BencaoModal bencaos={bencaos} />
       </body>
     </html>
   )
