@@ -8,6 +8,8 @@ export type Missa = {
   destaque?: boolean
   icone: string
   horarios: Horario[]
+  programacaoSemanal?: string[]
+  observacao?: string
 }
 
 export type AgendaItem = {
@@ -113,7 +115,7 @@ export type Sacerdote = {
   id: string
   nome: string
   titulo: string
-  cargo: string
+  cargo: 'bispo' | 'reitor' | 'paroco_solidario' | 'diacono' | (string & {})
   foto: string
   bio: string
   bispo: boolean
