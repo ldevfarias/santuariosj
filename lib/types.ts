@@ -55,16 +55,12 @@ export type Grupo = {
 }
 
 export type Comunidade = {
-  id: string
-  slug: string
+  id: number
   nome: string
-  bairro: string
-  celebracao: string
+  endereco: string
+  celebracoes: string
   mapaUrl: string
-  imagemPrincipal: string
-  imagemPrincipalAlt: string
-  imagemSecundaria: string
-  imagemSecundariaAlt: string
+  imagem: string
 }
 
 export type Devocao = {
