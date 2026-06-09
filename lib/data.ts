@@ -38,7 +38,7 @@ function parseJsonField<T>(raw: string | null | undefined, fallback: T): T {
 // ── missas ───────────────────────────────────────────────────────────────────
 
 type MissaRow = {
-  id: number; ordem: number; dia: string; destaque: number; icone: string
+  id: number; ordem: number; dia: string; destaque: number
   horarios: string; programacao_semanal: string | null; observacao: string | null
 }
 
@@ -48,7 +48,6 @@ export const getMissas = dbCache(
     return rows.map((r) => ({
       dia: r.dia,
       destaque: Boolean(r.destaque),
-      icone: r.icone,
       horarios: parseJsonField(r.horarios, [] as Missa['horarios']),
       programacaoSemanal: parseJsonField(r.programacao_semanal, undefined as string[] | undefined),
       observacao: r.observacao ?? undefined,
