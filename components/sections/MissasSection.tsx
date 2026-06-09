@@ -1,4 +1,4 @@
-import { MapPin } from 'lucide-react'
+import { Info, MapPin } from 'lucide-react'
 import Image from 'next/image'
 
 import type { Missa } from '@/lib/types'
@@ -84,6 +84,35 @@ export default function MissasSection({ missas }: MissasSectionProps) {
                   </li>
                 ))}
               </ul>
+
+              {missa.programacaoSemanal && missa.programacaoSemanal.length > 0 && (
+                <ul className="mt-3 space-y-1">
+                  {missa.programacaoSemanal.map((item) => (
+                    <li
+                      key={item}
+                      className={`flex items-start gap-2 text-sm ${missa.destaque ? 'text-white/80' : 'text-text-soft'}`}
+                    >
+                      <span className="mt-0.5 shrink-0">•</span>
+                      <span>{item}</span>
+                    </li>
+                  ))}
+                </ul>
+              )}
+
+              {missa.observacao && (
+                <div
+                  className={`mt-3 flex items-start gap-2 rounded-lg border px-3 py-2.5 ${missa.destaque
+                    ? 'border-white/20 bg-white/10 text-white/80'
+                    : 'border-gold/25 bg-gold/5 text-text-soft'
+                    }`}
+                >
+                  <Info
+                    size={14}
+                    className={`mt-0.5 shrink-0 ${missa.destaque ? 'text-gold-bright' : 'text-gold'}`}
+                  />
+                  <p className="text-xs">{missa.observacao}</p>
+                </div>
+              )}
             </div>
           ))}
         </div>
