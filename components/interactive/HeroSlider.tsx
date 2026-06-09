@@ -3,12 +3,9 @@
 import Image from 'next/image'
 import { useCallback, useEffect, useRef, useState } from 'react'
 
-const slides = [
-  { src: '/img/sagrada_familia.avif', alt: 'Sagrada Família — Santuário de São José de Ribamar', position: 'object-center' },
-  { src: '/img/foto_3.jpeg', alt: 'Igreja do Santuário', position: 'object-[center_20%]' },
-]
+type Slide = { src: string; alt: string; position: string }
 
-export default function HeroSlider() {
+export default function HeroSlider({ slides }: { slides: Slide[] }) {
   const [current, setCurrent] = useState(0)
   const timerRef = useRef<ReturnType<typeof setInterval> | null>(null)
 

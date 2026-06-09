@@ -4,14 +4,27 @@ import Link from 'next/link'
 
 import HeroSlider from '../interactive/HeroSlider'
 
-export default function HeroSection() {
+type Slide = { src: string; alt: string; position: string }
+type HeroData = { titulo: string; tituloDestaque: string; subtitulo: string }
+
+const FALLBACK: HeroData = {
+  titulo: 'Santuário de',
+  tituloDestaque: 'São José de Ribamar',
+  subtitulo: 'Um lugar sagrado de fé, esperança e encontro com Deus.\nVenha orar, peregrinar e renovar sua vida.',
+}
+
+export default function HeroSection({ hero, slides }: { hero: HeroData; slides: Slide[] }) {
+  const titulo = hero.titulo || FALLBACK.titulo
+  const tituloDestaque = hero.tituloDestaque || FALLBACK.tituloDestaque
+  const subtitulo = hero.subtitulo || FALLBACK.subtitulo
+
   return (
     <section
       id="hero"
       className="relative h-screen min-h-[600px] flex items-center justify-center overflow-hidden"
     >
       {/* Slides (client) */}
-      <HeroSlider />
+      <HeroSlider slides={slides} />
 
       {/* Overlay */}
       <div className="absolute inset-0 bg-black/50 z-[1]" />
@@ -19,13 +32,11 @@ export default function HeroSection() {
       {/* Content */}
       <div className="hero-content relative z-[2] text-center text-white px-4 max-w-3xl mx-auto">
         <h1 className="font-serif text-[clamp(2rem,6vw,4rem)] font-bold leading-tight mb-4">
-          Santuário de{' '}
-          <span className="text-gold-bright">São José de Ribamar</span>
+          {titulo}{' '}
+          <span className="text-gold-bright">{tituloDestaque}</span>
         </h1>
-        <p className="font-lora text-[clamp(1rem,2.5vw,1.3rem)] text-white/90 mb-8 max-w-xl mx-auto">
-          Um lugar sagrado de fé, esperança e encontro com Deus.
-          <br />
-          Venha orar, peregrinar e renovar sua vida.
+        <p className="font-lora text-[clamp(1rem,2.5vw,1.3rem)] text-white/90 mb-8 max-w-xl mx-auto whitespace-pre-line">
+          {subtitulo}
         </p>
         <div className="flex flex-col sm:flex-row gap-4 justify-center">
           <Link

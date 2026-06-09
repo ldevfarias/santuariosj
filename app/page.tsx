@@ -17,6 +17,8 @@ import PixCampanhaButton from '@/components/interactive/PixCampanhaButton'
 import {
   getAgenda,
   getGrupos,
+  getHero,
+  getHeroSlides,
   getMissas,
   getNoticias,
   getSacramentos,
@@ -34,15 +36,19 @@ export const metadata: Metadata = {
 }
 
 export default async function HomePage() {
-  const missas = await getMissas()
-  const agenda = await getAgenda()
-  const noticias = await getNoticias()
-  const sacramentos = await getSacramentos()
-  const grupos = await getGrupos()
+  const [hero, heroSlides, missas, agenda, noticias, sacramentos, grupos] = await Promise.all([
+    getHero(),
+    getHeroSlides(),
+    getMissas(),
+    getAgenda(),
+    getNoticias(),
+    getSacramentos(),
+    getGrupos(),
+  ])
 
   return (
     <>
-      <HeroSection />
+      <HeroSection hero={hero} slides={heroSlides} />
       <NoticeBar />
       <MissasSection missas={missas} />
       <CalendarioSection agenda={agenda} />

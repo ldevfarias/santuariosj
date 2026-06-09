@@ -241,7 +241,7 @@ type HeroSlideRow = {
 
 const FALLBACK_SLIDES = [
   { src: '/img/sagrada_familia.avif', alt: 'Sagrada Família — Santuário de São José de Ribamar', position: 'object-center' },
-  { src: '/img/foto_3.jpeg', alt: 'Igreja do Santuário', position: 'object-[center_20%]' },
+  { src: '/img/foto_3.jpeg', alt: 'Igreja do Santuário', position: 'object-[center_80%]' },
 ]
 
 export const getHeroSlides = dbCache(
