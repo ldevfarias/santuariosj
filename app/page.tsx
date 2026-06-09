@@ -45,7 +45,7 @@ export default async function HomePage() {
       <MissasSection missas={missas} />
       <CalendarioSection agenda={agenda} />
       <SobreSection />
-      <NoticiasSection noticias={noticias} />
+      {noticias.length >= 2 && <NoticiasSection noticias={noticias} />}
       <SaoJoseSection />
       <SacramentosSection sacramentos={sacramentos} />
       <PastoralSection grupos={grupos} />
