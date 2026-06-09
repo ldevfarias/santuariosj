@@ -7,6 +7,7 @@ import DevocoesSection from '@/components/sections/DevocoesSection'
 import HeroSection from '@/components/sections/HeroSection'
 import MissasSection from '@/components/sections/MissasSection'
 import NoticiasSection from '@/components/sections/NoticiasSection'
+import ParceirosSection from '@/components/sections/ParceirosSection'
 import PastoralSection from '@/components/sections/PastoralSection'
 import SacramentosSection from '@/components/sections/SacramentosSection'
 import SaoJoseSection from '@/components/sections/SaoJoseSection'
@@ -47,6 +48,7 @@ export default async function HomePage() {
       <CalendarioSection agenda={agenda} />
       <SobreSection />
       {noticias.length >= 2 && <NoticiasSection noticias={noticias} />}
+      <ParceirosSection />
       <SaoJoseSection />
       <SacramentosSection sacramentos={sacramentos} />
       <PastoralSection grupos={grupos} />
