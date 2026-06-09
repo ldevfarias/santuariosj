@@ -6,7 +6,6 @@ export type Horario = {
 export type Missa = {
   dia: string
   destaque?: boolean
-  icone: string
   horarios: Horario[]
   programacaoSemanal?: string[]
   observacao?: string
