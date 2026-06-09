@@ -102,11 +102,6 @@ export type Historia = {
   complexo: string[]
 }
 
-export type ContactFormState = {
-  success: boolean
-  message: string
-} | null
-
 export type Sacerdote = {
   id: string
   nome: string

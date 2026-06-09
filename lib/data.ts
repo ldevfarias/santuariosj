@@ -107,31 +107,50 @@ export const getNoticias = dbCache(
 
 // ── sacramentos ──────────────────────────────────────────────────────────────
 
+// O banco (gerido pelo CMS) não armazena slug/href/cta/icone para sacramentos
+// e usa os nomes `versiculo` (descrição curta) e `informacoes` (texto de
+// agendamento). Esses metadados de apresentação são derivados aqui, com chave
+// na coluna `ordem`, mantendo a UI estável independente do schema do CMS.
+type SacramentoMeta = { slug: string; icone: string; cta: string }
+
+const SACRAMENTO_META: Record<number, SacramentoMeta> = {
+  0: { slug: 'baptism', icone: 'Droplets', cta: 'Agendar' },
+  1: { slug: 'confirmation', icone: 'Wind', cta: 'Saiba mais' },
+  2: { slug: 'eucharist', icone: 'Wheat', cta: 'Saiba mais' },
+  3: { slug: 'confession', icone: 'ShieldCheck', cta: 'Ver horários' },
+  4: { slug: 'matrimony', icone: 'Heart', cta: 'Agendar' },
+  5: { slug: 'anointing-of-the-sick', icone: 'HeartPulse', cta: 'Solicitar' },
+  6: { slug: 'holy-orders', icone: 'Cross', cta: 'Saiba mais' },
+}
+
 type SacramentoRow = {
-  id: number; ordem: number; slug: string; nome: string; descricao: string
+  id: number; ordem: number; nome: string; versiculo: string
   descricao_italico: number; descricao_longa: string; requisitos: string
-  agendamento: string; agendamento_itens: string | null
-  agendamento_contato: string | null; cta: string | null; href: string; icone: string
+  informacoes: string; agendamento_contato: string | null
 }
 
 export const getSacramentos = dbCache(
   async (): Promise<Sacramento[]> => {
     const rows = await query<SacramentoRow>('SELECT * FROM sacramentos ORDER BY ordem ASC')
-    return rows.map((r) => ({
-      id: r.slug,
-      slug: r.slug,
-      nome: r.nome,
-      descricao: r.descricao,
-      descricaoItalico: Boolean(r.descricao_italico),
-      descricaoLonga: r.descricao_longa,
-      requisitos: parseJsonField(r.requisitos, [] as string[]),
-      agendamento: r.agendamento,
-      agendamentoItens: parseJsonField(r.agendamento_itens, undefined as string[] | undefined),
-      agendamentoContato: r.agendamento_contato ?? undefined,
-      cta: r.cta ?? undefined,
-      href: r.href,
-      icone: r.icone,
-    }))
+    return rows.map((r) => {
+      const meta = SACRAMENTO_META[r.ordem]
+      const slug = meta?.slug ?? `sacramento-${r.ordem}`
+      return {
+        id: slug,
+        slug,
+        nome: r.nome,
+        descricao: r.versiculo,
+        descricaoItalico: Boolean(r.descricao_italico),
+        descricaoLonga: r.descricao_longa,
+        requisitos: parseJsonField(r.requisitos, [] as string[]),
+        agendamento: r.informacoes,
+        agendamentoItens: undefined,
+        agendamentoContato: r.agendamento_contato ?? undefined,
+        cta: meta?.cta,
+        href: `/sacramentos/${slug}`,
+        icone: meta?.icone ?? 'Cross',
+      }
+    })
   },
   ['sacramentos'],
   { revalidate: 1800, tags: ['sacramentos'] }

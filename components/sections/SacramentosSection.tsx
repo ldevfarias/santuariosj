@@ -50,12 +50,9 @@ export default function SacramentosSection({ sacramentos }: SacramentosSectionPr
               </p>
               <div className="mt-auto pt-4 min-h-[1.5rem] flex items-center justify-center">
                 {s.cta && (
-                  <Link
-                    href={s.href}
-                    className="inline-flex items-center gap-1 text-sm font-semibold text-gold hover:text-gold-light transition-colors"
-                  >
+                  <span className="inline-flex items-center gap-1 text-sm font-semibold text-gold">
                     {s.cta} <ArrowRight size={14} />
-                  </Link>
+                  </span>
                 )}
               </div>
             </Link>

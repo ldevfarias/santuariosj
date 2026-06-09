@@ -1,6 +1,5 @@
 import { Building2, Clock, HandCoins, Mail, MapPin, Phone } from 'lucide-react'
 
-import ContatoForm from '../interactive/ContatoForm'
 import SectionHeader from '../ui/SectionHeader'
 
 export default function ContatoSection() {
@@ -92,7 +91,7 @@ export default function ContatoSection() {
           </div>
 
           {/* Map */}
-          <div className="reveal rounded-xl overflow-hidden shadow-md min-h-[300px]">
+          <div className="lg:col-span-2 reveal rounded-xl overflow-hidden shadow-md min-h-[300px]">
             <iframe
               src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d31820.476!2d-44.0588!3d-2.5655!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x7f68ce2a57b4e49%3A0x6b8a6b8a6b8a6b8a!2sSão%20José%20de%20Ribamar%2C%20MA!5e0!3m2!1spt!2sbr!4v1234567890"
               width="100%"
@@ -103,11 +102,6 @@ export default function ContatoSection() {
               referrerPolicy="no-referrer-when-downgrade"
               title="Localização do Santuário"
             />
-          </div>
-
-          {/* Form */}
-          <div className="reveal-right bg-white rounded-xl p-8 shadow-md">
-            <ContatoForm />
           </div>
         </div>
       </div>
