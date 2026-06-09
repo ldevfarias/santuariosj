@@ -1,0 +1,95 @@
+import { z } from 'zod'
+
+const naoVazio = z.string().trim().min(1, 'Obrigatório')
+
+export const horarioSchema = z.object({ hora: naoVazio, desc: naoVazio })
+
+export const missaSchema = z.object({
+  dia: naoVazio,
+  destaque: z.boolean().default(false),
+  horarios: z.array(horarioSchema).min(1, 'Pelo menos um horário'),
+  programacaoSemanal: z.array(z.string()).optional(),
+  observacao: z.string().optional(),
+})
+
+export const agendaSchema = z.object({
+  dia: z.coerce.number().int().min(1).max(31),
+  mes: naoVazio,
+  titulo: naoVazio,
+  hora: naoVazio,
+  local: naoVazio,
+  tipo: z.enum(['festivo', 'liturgico', 'padroeiro']),
+})
+
+export const noticiaSchema = z.object({
+  titulo: naoVazio,
+  categoria: naoVazio,
+  data: naoVazio,
+  conteudo: naoVazio,
+  imagem: z.string().default(''),
+  destaque: z.boolean().default(false),
+})
+
+export const sacramentoSchema = z.object({
+  nome: naoVazio,
+  versiculo: naoVazio,
+  descricaoItalico: z.boolean().default(false),
+  descricaoLonga: naoVazio,
+  requisitos: z.array(z.string()).default([]),
+  informacoes: naoVazio,
+  agendamentoContato: z.string().optional(),
+})
+
+export const bencaoDiaSchema = z.object({
+  dia: naoVazio,
+  mensagem: naoVazio,
+  autor: z.string().default(''),
+  imagem: z.string().default(''),
+})
+
+export const episcopaleSchema = z.object({
+  nome: naoVazio,
+  titulo: naoVazio,
+  cargo: z.enum(['bispo', 'reitor', 'paroco_solidario', 'diacono']),
+  biografia: z.string().default(''),
+  foto: z.string().default(''),
+})
+
+export const comunidadeSchema = z.object({
+  nome: naoVazio,
+  endereco: naoVazio,
+  celebracoes: z.string().default(''),
+  mapaUrl: z.string().default(''),
+  imagem: z.string().default(''),
+})
+
+export const grupoSchema = z.object({
+  nome: naoVazio,
+  descricao: naoVazio,
+  encontro: z.string().optional(),
+})
+
+export const heroSchema = z.object({
+  titulo: naoVazio,
+  tituloDestaque: naoVazio,
+  subtitulo: naoVazio,
+})
+
+export const heroSlideSchema = z.object({
+  imagem: naoVazio,
+  alt: naoVazio,
+  position: z.string().optional(),
+})
+
+export const trocarSenhaSchema = z.object({
+  atual: naoVazio,
+  nova: z
+    .string()
+    .min(8, 'Mínimo 8 caracteres')
+    .regex(/[a-z]/, 'Pelo menos 1 letra minúscula')
+    .regex(/[A-Z]/, 'Pelo menos 1 letra maiúscula')
+    .regex(/[0-9]/, 'Pelo menos 1 número')
+    .regex(/[^a-zA-Z0-9]/, 'Pelo menos 1 caractere especial'),
+  confirmacao: z.string(),
+}).refine((d) => d.nova === d.confirmacao, { message: 'Senhas não conferem', path: ['confirmacao'] })
+  .refine((d) => d.atual !== d.nova, { message: 'Nova senha deve ser diferente da atual', path: ['nova'] })
