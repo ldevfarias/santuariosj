@@ -12,6 +12,7 @@ import SacramentosSection from '@/components/sections/SacramentosSection'
 import SaoJoseSection from '@/components/sections/SaoJoseSection'
 import SobreSection from '@/components/sections/SobreSection'
 import NoticeBar from '@/components/ui/NoticeBar'
+import PixCampanhaButton from '@/components/interactive/PixCampanhaButton'
 import {
   getAgenda,
   getGrupos,
@@ -52,6 +53,7 @@ export default async function HomePage() {
       <DevocoesSection />
       <CitacaoSection />
       <ContatoSection />
+      <PixCampanhaButton />
     </>
   )
 }
