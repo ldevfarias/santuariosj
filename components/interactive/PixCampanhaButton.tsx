@@ -69,6 +69,7 @@ export default function PixCampanhaButton() {
         role="dialog"
         aria-modal="false"
         aria-label="Campanha dos Devotos — Pix"
+        aria-hidden={!open}
         className={`fixed right-[52px] lg:right-[60px] top-1/2 -translate-y-1/2 z-40
           w-72 bg-white rounded-xl shadow-2xl border border-cream-dk
           transition-all duration-200 origin-right
