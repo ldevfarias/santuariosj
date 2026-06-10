@@ -14,9 +14,9 @@ type Props = {
 }
 
 function DynamicIcon({ name, size = 32 }: { name: string; size?: number }) {
-  // eslint-disable-next-line @typescript-eslint/no-explicit-any
-  const Icon = (Icons as any)[name] as React.ComponentType<{ size?: number; className?: string }> | undefined
-  if (!Icon || typeof Icon !== 'function') return null
+  const iconMap = Icons as unknown as Record<string, Icons.LucideIcon>
+  const Icon = iconMap[name]
+  if (!Icon || typeof Icon !== 'function') return <Icons.Cross size={size} />
   return <Icon size={size} />
 }
 
@@ -45,13 +45,6 @@ export default async function SacramentoPage({ params }: Props) {
       {/* Hero strip */}
       <div className="bg-burgundy py-6">
         <div className="container-site flex flex-col gap-2.5">
-          <Link
-            href="/sacramentos"
-            className="inline-flex items-center gap-2 text-sm text-gold-bright/80 hover:text-gold-bright font-semibold transition-colors self-start"
-          >
-            <ArrowLeft size={15} />
-            Sacramentos
-          </Link>
           <div className="flex items-center gap-4">
             <div className="shrink-0 w-12 h-12 rounded-full bg-white/10 flex items-center justify-center text-gold-bright">
               <DynamicIcon name={sacramento.icone} size={22} />
@@ -121,12 +114,14 @@ export default async function SacramentoPage({ params }: Props) {
               </div>
             )}
             {sacramento.cta && (
-              <Link
-                href="/#contato"
+              <a
+                href={`https://api.whatsapp.com/send?phone=5598989114019&text=${encodeURIComponent(`Olá! Gostaria de informações sobre o sacramento: ${sacramento.nome}.`)}`}
+                target="_blank"
+                rel="noopener noreferrer"
                 className="inline-flex items-center justify-center gap-2 rounded px-5 py-3 bg-burgundy text-white text-sm font-semibold hover:bg-burgundy-dk transition-colors"
               >
                 {sacramento.cta}
-              </Link>
+              </a>
             )}
           </div>
 
