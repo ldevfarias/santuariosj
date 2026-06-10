@@ -3,8 +3,8 @@ import Image from 'next/image'
 import type { Sacerdote } from '@/lib/types'
 
 const CARGO_LABEL: Record<string, string> = {
-  bispo: 'Bispo',
-  reitor: 'Reitor',
+  bispo: 'Arcebispo Metropolitano',
+  reitor: 'Reitor do Santuário',
   paroco_solidario: 'Pároco Solidário',
   diacono: 'Diácono Permanente',
 }
@@ -38,7 +38,7 @@ export default function PriestCard({ padre }: PriestCardProps) {
           {CARGO_LABEL[padre.cargo] ?? padre.cargo}
         </span>
         <h3 className="font-serif text-xl font-bold text-text mb-2">
-          {padre.titulo} {padre.nome}
+          {padre.nome}
         </h3>
         <div className="w-12 border-b border-gold mb-4" />
         <details className="group bio-details">

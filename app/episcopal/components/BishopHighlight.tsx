@@ -5,8 +5,8 @@ import type { Sacerdote } from '@/lib/types'
 import Ornament from '@/components/ui/Ornament'
 
 const CARGO_LABEL: Record<string, string> = {
-  bispo: 'Bispo',
-  reitor: 'Reitor',
+  bispo: 'Arcebispo Metropolitano',
+  reitor: 'Reitor do Santuário',
   paroco_solidario: 'Pároco Solidário',
   diacono: 'Diácono Permanente',
 }
@@ -46,7 +46,7 @@ export default function BishopHighlight({ bispo }: BishopHighlightProps) {
               {CARGO_LABEL[bispo.cargo] ?? bispo.cargo}
             </span>
             <h2 className="font-serif text-[clamp(1.8rem,4vw,3rem)] font-bold text-white leading-tight">
-              {bispo.titulo} {bispo.nome}
+              {bispo.nome}
             </h2>
             <Ornament light />
             {shouldCollapse ? (
