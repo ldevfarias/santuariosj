@@ -6,7 +6,11 @@ export async function POST(req: NextRequest) {
   if (secret !== process.env.REVALIDATE_SECRET) {
     return NextResponse.json({ error: 'Unauthorized' }, { status: 401 })
   }
-  const { tag } = await req.json()
+  const body = await req.json()
+  const tag: unknown = body?.tag
+  if (typeof tag !== 'string' || !tag) {
+    return NextResponse.json({ error: 'tag must be a non-empty string' }, { status: 400 })
+  }
   revalidateTag(tag)
   return NextResponse.json({ revalidated: true, tag })
 }

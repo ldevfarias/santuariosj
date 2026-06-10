@@ -12,14 +12,21 @@ const s3 = new S3Client({
   },
 })
 
+const ALLOWED_KEY_RE = /^[\w\-/]+\.(jpg|jpeg|png|avif|webp|gif|svg|ico)$/i
+
 export async function GET(request: NextRequest) {
-  const key = request.nextUrl.searchParams.get('key')
-  if (!key) return NextResponse.json({ error: 'key required' }, { status: 400 })
+  const raw = request.nextUrl.searchParams.get('key')
+  if (!raw) return NextResponse.json({ error: 'key required' }, { status: 400 })
+
+  const key = decodeURIComponent(raw)
+  if (!ALLOWED_KEY_RE.test(key) || key.includes('..')) {
+    return NextResponse.json({ error: 'invalid key' }, { status: 400 })
+  }
 
   try {
     const command = new GetObjectCommand({
       Bucket: process.env.R2_BUCKET_NAME!,
-      Key: decodeURIComponent(key),
+      Key: key,
     })
     const response = await s3.send(command)
     const bytes = await response.Body?.transformToByteArray()
