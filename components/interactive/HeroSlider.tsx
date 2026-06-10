@@ -45,7 +45,8 @@ export default function HeroSlider({ slides }: { slides: Slide[] }) {
             alt={slide.alt}
             fill
             priority={i === 0}
-            className={`object-cover ${slide.position}`}
+            className="object-cover"
+            style={{ objectPosition: slide.position }}
             sizes="100vw"
           />
         </div>

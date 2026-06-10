@@ -45,6 +45,13 @@ export default async function SacramentoPage({ params }: Props) {
       {/* Hero strip */}
       <div className="bg-burgundy py-6">
         <div className="container-site flex flex-col gap-2.5">
+          <Link
+            href="/#sacramentos"
+            className="inline-flex items-center gap-1.5 text-xs text-gold-bright/70 hover:text-gold-bright transition-colors"
+          >
+            <ArrowLeft size={13} />
+            Todos os sacramentos
+          </Link>
           <div className="flex items-center gap-4">
             <div className="shrink-0 w-12 h-12 rounded-full bg-white/10 flex items-center justify-center text-gold-bright">
               <DynamicIcon name={sacramento.icone} size={22} />

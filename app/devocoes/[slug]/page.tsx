@@ -74,33 +74,17 @@ export default async function DevocaoDetailPage({ params }: Props) {
 
         <aside className="h-fit">
           {devocao.imagemSecundariaSrc ? (
-            <div className="rounded-2xl border border-cream-dk bg-linear-to-br from-white to-cream p-4 shadow-sm">
-              <div className="relative pb-20 sm:pb-24">
-                <div className="relative ml-auto w-[88%] overflow-hidden rounded-2xl border border-cream-dk aspect-4/5 bg-cream-dk shadow-lg">
-                  <Image
-                    src={devocao.imagemSrc}
-                    alt={devocao.imagemAlt}
-                    fill
-                    className="object-cover"
-                    sizes="(max-width: 1024px) 100vw, 33vw"
-                    priority
-                  />
-                </div>
-
-                <div className="absolute -bottom-1 left-0 w-[58%] overflow-hidden rounded-xl border-4 border-white aspect-4/5 bg-cream-dk shadow-md">
-                  <Image
-                    src={devocao.imagemSecundariaSrc}
-                    alt={devocao.imagemSecundariaAlt ?? devocao.imagemAlt}
-                    fill
-                    className="object-cover"
-                    sizes="(max-width: 1024px) 55vw, 18vw"
-                  />
-                </div>
+            <div className="rounded-2xl border border-cream-dk bg-white p-4 shadow-sm">
+              <div className="relative w-full overflow-hidden rounded-xl aspect-4/5 bg-cream-dk">
+                <Image
+                  src="/img/devota.png"
+                  alt="Devota em oração na Casa das Velas"
+                  fill
+                  className="object-cover"
+                  sizes="(max-width: 1024px) 100vw, 33vw"
+                  priority
+                />
               </div>
-
-              <p className="mt-3 text-xs text-text-soft/90 leading-relaxed">
-                A chama da fé acesa na oração pessoal e na devoção comunitária.
-              </p>
             </div>
           ) : (
             <div className="rounded-2xl border border-cream-dk bg-white p-4 shadow-sm">

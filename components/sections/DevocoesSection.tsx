@@ -1,6 +1,5 @@
 import { ArrowRight } from 'lucide-react'
 import Image from 'next/image'
-
 import Link from 'next/link'
 
 import { getDevocoesPages } from '@/lib/data'
@@ -8,83 +7,68 @@ import { getDevocoesPages } from '@/lib/data'
 import Ornament from '../ui/Ornament'
 
 export default function DevocoesSection() {
-  const devocoes = getDevocoesPages()
-  const featured = devocoes[0]
-  const rest = devocoes.slice(1)
+  const devocoes = getDevocoesPages().filter((d) => d.slug !== 'ex-voto-museum')
 
-  if (!featured) return null
+  if (devocoes.length === 0) return null
+
+  const cardImage = (slug: string, src: string) =>
+    slug === 'house-of-candles' ? '/img/devota.png' : src
 
   return (
-    <section id="devocoes" className="py-20 bg-cream">
+    <section id="devocoes" className="py-20 bg-burgundy-dk">
       <div className="container-site">
         {/* Cabeçalho */}
         <div className="text-center mb-12">
-          <Ornament />
-          <h2 className="font-serif text-[clamp(1.8rem,4vw,2.8rem)] font-bold text-burgundy mb-3">
+          <Ornament light />
+          <h2 className="font-serif text-[clamp(1.8rem,4vw,2.8rem)] font-bold text-gold mb-3">
             Devoções Tradicionais
           </h2>
-          <p className="text-text-soft max-w-xl mx-auto leading-relaxed">
+          <p className="text-white/70 max-w-xl mx-auto leading-relaxed">
             O Santuário mantém vivas as tradições devocionais que alimentam a fé do povo
             maranhense há séculos.
           </p>
         </div>
 
-        {/* Artigo destaque */}
-        <article className="reveal grid grid-cols-1 lg:grid-cols-5 rounded-2xl overflow-hidden border border-cream-dk shadow-md bg-white mb-8">
-          <div className="lg:col-span-2 relative min-h-64 lg:min-h-full bg-cream-dk">
-            <Image
-              src={featured.imagemSrc}
-              alt={featured.imagemAlt}
-              fill
-              className="object-cover"
-              sizes="(max-width: 1024px) 100vw, 40vw"
-            />
-          </div>
-          <div className="lg:col-span-3 p-8 md:p-10 flex flex-col justify-center">
-            <span className="text-xs font-semibold tracking-widest uppercase text-gold mb-4">
-              Destaque
-            </span>
-            <h3 className="font-serif text-[clamp(1.5rem,3vw,2rem)] font-bold text-burgundy mb-3 leading-tight">
-              {featured.titulo}
-            </h3>
-            <p className="font-lora text-base italic text-text-soft leading-relaxed mb-2">
-              {featured.descricaoHero}
-            </p>
-            <p className="text-sm text-text-soft leading-relaxed mb-8">
-              {featured.resumoArtigo}
-            </p>
-            <Link
-              href={featured.href}
-              className="self-start inline-flex items-center gap-2 px-6 py-3 bg-burgundy text-white text-sm font-semibold rounded hover:bg-burgundy-dk transition-colors"
-            >
-              Conhecer a Casa dos Milagres <ArrowRight size={15} />
-            </Link>
-          </div>
-        </article>
-
-        {/* Artigos secundários */}
+        {/* Cards full-bleed */}
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-          {rest.map((devocao, i) => (
+          {devocoes.map((devocao) => (
             <article
               key={devocao.slug}
-              className="reveal group rounded-xl border border-cream-dk bg-white p-7 shadow-sm hover:shadow-md transition-shadow flex flex-col gap-3"
-              style={{ transitionDelay: `${i * 120}ms` }}
+              className="reveal group relative rounded-2xl overflow-hidden min-h-[420px] flex flex-col justify-end"
             >
-              <div className="w-8 h-0.5 bg-gold rounded-full" />
-              <h3 className="font-serif text-xl font-bold text-burgundy group-hover:text-burgundy-dk transition-colors">
-                {devocao.titulo}
-              </h3>
-              <p className="text-sm text-text-soft leading-relaxed flex-1">{devocao.descricaoHero}</p>
-              <Link
-                href={devocao.href}
-                className="mt-2 inline-flex items-center gap-1.5 text-sm font-semibold text-gold hover:text-gold-light transition-colors"
-              >
-                Saiba mais <ArrowRight size={13} />
-              </Link>
+              {/* Foto de fundo */}
+              <Image
+                src={cardImage(devocao.slug, devocao.imagemSrc)}
+                alt={devocao.imagemAlt}
+                fill
+                className="object-cover transition-transform duration-700 group-hover:scale-105"
+                sizes="(max-width: 768px) 100vw, 50vw"
+              />
+
+              {/* Overlay gradiente */}
+              <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/40 to-transparent" />
+
+              {/* Conteúdo */}
+              <div className="relative z-10 p-8">
+                <span className="block text-xs font-semibold tracking-widest uppercase text-gold mb-3">
+                  {devocao.slug === 'house-of-miracles' ? 'Lugar de Memória e Fé' : 'Oração e Entrega'}
+                </span>
+                <h3 className="font-serif text-[clamp(1.4rem,3vw,1.9rem)] font-bold text-white mb-3 leading-tight">
+                  {devocao.titulo}
+                </h3>
+                <p className="text-white/80 text-sm leading-relaxed mb-5 max-w-sm">
+                  {devocao.descricaoHero}
+                </p>
+                <Link
+                  href={devocao.href}
+                  className="inline-flex items-center gap-1.5 text-sm font-semibold text-gold hover:text-gold-bright transition-colors"
+                >
+                  Conhecer <ArrowRight size={14} />
+                </Link>
+              </div>
             </article>
           ))}
         </div>
-
       </div>
     </section>
   )

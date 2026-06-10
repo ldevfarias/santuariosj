@@ -239,8 +239,8 @@ type HeroSlideRow = {
 }
 
 const FALLBACK_SLIDES = [
-  { src: '/img/sagrada_familia.avif', alt: 'Sagrada Família — Santuário de São José de Ribamar', position: 'object-center' },
-  { src: '/img/foto_3.jpeg', alt: 'Igreja do Santuário', position: 'object-[center_80%]' },
+  { src: '/img/sagrada_familia.avif', alt: 'Sagrada Família — Santuário de São José de Ribamar', position: 'center 15%' },
+  { src: '/img/foto_3.jpeg', alt: 'Igreja do Santuário', position: 'center 80%' },
 ]
 
 export const getHeroSlides = dbCache(
@@ -250,7 +250,7 @@ export const getHeroSlides = dbCache(
     return rows.map((r) => ({
       src: r.imagem,
       alt: r.alt,
-      position: r.position ?? 'object-center',
+      position: r.position ?? 'center center',
     }))
   },
   ['hero_slides'],
