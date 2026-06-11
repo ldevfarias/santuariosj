@@ -1,6 +1,5 @@
-import { Cinzel, Lora, Open_Sans } from 'next/font/google'
-
 import type { Metadata } from 'next'
+import { Cinzel, Lora, Open_Sans } from 'next/font/google'
 
 import BackToTop from '@/components/interactive/BackToTop'
 import BencaoModal from '@/components/interactive/BencaoModal'
@@ -10,10 +9,11 @@ import ScrollReveal from '@/components/interactive/ScrollReveal'
 import Footer from '@/components/layout/Footer'
 import Header from '@/components/layout/Header'
 import Topbar from '@/components/layout/Topbar'
-
 import { getBencaoDia } from '@/lib/data'
 
 import './globals.css'
+
+export const dynamic = 'force-dynamic'
 
 const cinzel = Cinzel({
   subsets: ['latin'],
