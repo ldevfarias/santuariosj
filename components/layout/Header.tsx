@@ -69,7 +69,7 @@ export default function Header() {
             { href: 'https://www.instagram.com/santuarioribamar/', icon: InstagramIcon, label: 'Instagram' },
             { href: 'https://www.facebook.com/santuario.ribamar/', icon: FacebookIcon, label: 'Facebook' },
             { href: 'https://www.youtube.com/santuarioribamar/', icon: YouTubeIcon, label: 'YouTube' },
-            { href: 'https://api.whatsapp.com/send?phone=5598989114019&text=A%20Par%C3%B3quia%20Santu%C3%A1rio%20S%C3%A3o%20Jos%C3%A9%20de%20Ribamar%20agradece%20seu%20contato.%20Como%20podemos%20ajudar%3F', icon: WhatsAppIcon, label: 'WhatsApp' },
+            { href: 'https://api.whatsapp.com/send?phone=5598989114019', icon: WhatsAppIcon, label: 'WhatsApp' },
           ].map(({ href, icon: Icon, label }) => (
             <a
               key={label}
