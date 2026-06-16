@@ -52,7 +52,7 @@ export default function PixCampanhaButton() {
           <Heart size={14} className="shrink-0" />
           <span
             className="font-serif text-xs font-semibold tracking-wider uppercase"
-            style={{ writingMode: 'vertical-rl', textOrientation: 'mixed', transform: 'rotate(180deg)' }}
+            style={{ writingMode: 'vertical-rl', textOrientation: 'mixed' }}
           >
             Campanha dos Devotos
           </span>

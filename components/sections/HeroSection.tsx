@@ -4,7 +4,7 @@ import Link from 'next/link'
 
 import HeroSlider from '../interactive/HeroSlider'
 
-type Slide = { src: string; alt: string; position: string }
+type Slide = { src: string; srcMobile?: string; alt: string; position: string; positionMobile?: string }
 type HeroData = { titulo: string; tituloDestaque: string; subtitulo: string }
 
 const FALLBACK: HeroData = {
@@ -21,7 +21,7 @@ export default function HeroSection({ hero, slides }: { hero: HeroData; slides: 
   return (
     <section
       id="hero"
-      className="relative h-screen min-h-[600px] flex items-center justify-center overflow-hidden"
+      className="relative h-dvh min-h-[600px] flex items-center justify-center overflow-hidden"
     >
       {/* Slides (client) */}
       <HeroSlider slides={slides} />

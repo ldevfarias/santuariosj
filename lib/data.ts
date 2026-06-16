@@ -234,28 +234,12 @@ export async function getDevocoes(): Promise<{ lista: string[]; cards: DevoItem[
 
 // ── hero slides ──────────────────────────────────────────────────────────────
 
-type HeroSlideRow = {
-  id: number; ordem: number; imagem: string; alt: string; position: string | null
-}
-
 const FALLBACK_SLIDES = [
-  { src: '/img/sagrada_familia.avif', alt: 'Sagrada Família — Santuário de São José de Ribamar', position: 'center 15%' },
-  { src: '/img/foto_3.jpeg', alt: 'Igreja do Santuário', position: 'center 80%' },
+  { src: '/img/sagrada_familia.avif', srcMobile: '/img/sagrada_familia_mobile.png', alt: 'Sagrada Família — Santuário de São José de Ribamar', position: 'center 15%', positionMobile: 'center center' },
+  { src: '/img/foto_3.jpeg', alt: 'Igreja do Santuário', position: 'center 80%', positionMobile: 'center center' },
 ]
 
-export const getHeroSlides = dbCache(
-  async () => {
-    const rows = await query<HeroSlideRow>('SELECT * FROM hero_slides ORDER BY ordem ASC')
-    if (rows.length === 0) return FALLBACK_SLIDES
-    return rows.map((r) => ({
-      src: r.imagem,
-      alt: r.alt,
-      position: r.position ?? 'center center',
-    }))
-  },
-  ['hero_slides'],
-  { revalidate: 3600, tags: ['hero_slides'] }
-)
+export const getHeroSlides = () => FALLBACK_SLIDES
 
 // ── hero ─────────────────────────────────────────────────────────────────────
 

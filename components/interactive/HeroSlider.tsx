@@ -3,7 +3,7 @@
 import Image from 'next/image'
 import { useCallback, useEffect, useRef, useState } from 'react'
 
-type Slide = { src: string; alt: string; position: string }
+type Slide = { src: string; srcMobile?: string; alt: string; position: string; positionMobile?: string }
 
 export default function HeroSlider({ slides }: { slides: Slide[] }) {
   const [current, setCurrent] = useState(0)
@@ -33,19 +33,29 @@ export default function HeroSlider({ slides }: { slides: Slide[] }) {
 
   return (
     <>
-      {/* Slides */}
       {slides.map((slide, i) => (
         <div
           key={slide.src}
-          className={`absolute inset-0 transition-opacity duration-1000 ${i === current ? 'opacity-100' : 'opacity-0'
+          className={`absolute inset-0 transition-opacity duration-1000 hero-slide ${i === current ? 'opacity-100' : 'opacity-0'
             }`}
         >
+          {slide.srcMobile && (
+            <Image
+              src={slide.srcMobile}
+              alt={slide.alt}
+              fill
+              priority={i === 0}
+              className="object-cover block md:hidden"
+              style={{ objectPosition: slide.positionMobile ?? slide.position }}
+              sizes="100vw"
+            />
+          )}
           <Image
             src={slide.src}
             alt={slide.alt}
             fill
-            priority={i === 0}
-            className="object-cover"
+            priority={i === 0 && !slide.srcMobile}
+            className={`object-cover ${slide.srcMobile ? 'hidden md:block' : ''}`}
             style={{ objectPosition: slide.position }}
             sizes="100vw"
           />

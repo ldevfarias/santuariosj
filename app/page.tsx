@@ -36,7 +36,7 @@ export const metadata: Metadata = {
 }
 
 export default async function HomePage() {
-  const [hero, heroSlides, missas, agenda, noticias, sacramentos, grupos] = await Promise.all([
+    const [hero, heroSlides, missas, agenda, noticias, sacramentos, grupos] = await Promise.all([
     getHero(),
     getHeroSlides(),
     getMissas(),
